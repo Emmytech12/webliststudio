@@ -1,0 +1,377 @@
+@charset "utf-8";
+/* CSS Document */
+
+.login-session{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background: var(--primary-color);
+}
+
+
+.login-session .graphics-div{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-session .graphics-div .content{
+    min-height: 100px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.login-session .graphics-div .content .logo-div{
+    width: 180px;
+    background: var(--white-color);
+    padding: 4px 5px;
+    border-radius: 5px;
+}
+
+.login-session .graphics-div .content .logo-div img{
+    width: 100%;
+}
+
+.login-session .graphics-div .content .graphics{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.login-session .graphics-div .content .graphics img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.login-session .graphics-div .content h2{
+    color: var(--white-color);
+    text-align: center;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 0px;
+    margin: 0px;
+    font-family: title-font;
+}
+
+.login-session .graphics-div .content h2 span{
+    color: var(--secondary-color);
+    font-family: body-font;
+}
+ 
+
+
+
+
+.login-session .login-div{
+    position: absolute;
+    width:50%;
+    height: 100%;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--white-color);
+    overflow: auto;
+}
+
+.login-session .login-div .form-back-div {
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-session .login-div .form-back-div .form-div{
+    width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    color: var(--body-color);
+}
+
+.login-session .login-div .form-back-div .form-div .top-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-session .login-div .form-back-div .form-div .top-div h1{
+    color: #3498db;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: #b8b8b8 1px solid;
+    padding-bottom: 10px;   
+}
+
+.login-session .login-div .form-back-div .form-div .email-form{
+    gap: 10px; 
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form .btn{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-family: sub-title-font;
+    font-size: 15px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: all 0.2s ease-in 0.2s;
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form .btn:hover{
+    background: var(--secondary-color);
+}
+
+.login-session .login-div .form-back-div .form-div .forgot-pass{
+    display: flex;
+    align-self: flex-end;
+    padding: 10px 0px;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease-in 0.2s;
+}
+
+.login-session .login-div .form-back-div .form-div .sign-forgot-pass{
+    color: var(--sub-body-color);
+    gap: 5px;
+}
+
+.login-session .login-div .form-back-div .form-div .sign-forgot-pass span{
+    color: var(--primary-color);
+}
+
+.login-session .login-div .form-back-div .form-div .forgot-pass:hover{
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.login-session .login-div .form-back-div .form-div p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    color: var(--sub-body-color);
+    transition: all 0.2s ease-in 0.2s;
+}
+
+.login-session .login-div .form-back-div .form-div p span{
+    color: var(--primary-color);
+}
+
+.login-session .login-div .form-back-div .form-div p span:hover{
+    color: var(--secondary-color);
+}
+
+.login-session .login-div .form-back-div .form-div .bottom-container{
+    position: relative;
+    padding: 5px 0px;
+    color: var(--sub-body-color);
+    font-size: 13px;
+    text-align: center;
+}
+
+.login-session .login-div .form-back-div .form-div .bottom-container span{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+#reset_password_info{
+    display: none;
+}
+ 
+#send_link_info{
+    display: none;
+}
+
+
+
+.login-session .login-div .form-back-div .form-div .inner-form .notification{
+	font-size: 12px;
+	color: var(--text-color);
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form span:hover{
+	color: var(--primary-color);
+	cursor: pointer;
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form span i{
+	font-size: 10px;
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form .icon-div{
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: #73B13E;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form .icon-div i{
+	font-size: 20px;
+	color: var(--white-color);
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form h3{
+	padding: 0px;
+	margin: 0px;
+	font-size: 20px;
+	font-family: sub-title-font;
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form .btn-div{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form .btn-div .btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	border:none;
+    width: 40%;
+	border-radius: 5px;
+	height:40px;
+	padding: 0px 25px;
+	color:var(--white-color);
+	font-size:13px;
+	font-family: body-font;
+	background: var(--primary-color);
+	transition: 0.3s ease-in;
+	cursor:pointer;
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form .btn-div .btn i{
+	font-size:12px;
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form .btn-div .btn:hover{
+	background: var(--secondary-color);
+	color:var(--white-color);
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form .btn-div .notification-div span{
+	font-size:13px;
+	color: var(--text-color);
+	cursor:pointer;
+	transition: 0.3s ease-in;
+	border: none;
+	background: none;
+}
+
+.login-session .login-div .form-back-div .form-div .inner-form .btn-div .notification-div span:hover{
+	color:var(--secondary-color);
+}
+
+
+.email-form-alert {
+	margin: 5px auto;
+}
+
+
+.text_field_container .password-container {
+	position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none; 
+    cursor: pointer;
+    z-index: 100;
+}
+
+.text_field_container .lock-container {
+	position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block; 
+    cursor: pointer;
+    z-index: 100;
+}
+
+.text_field_container .bi-eye-slash {
+    font-size: 15px;
+    color: #999;
+}
+
+
+.login-session .login-div .form-back-div .form-div .inner-form .pswd_info{
+	font-size: 11px;
+	font-family: body-font;
+	color: var(--text-color);
+	margin-bottom: 8px;
+}
+
+
+
+@media all and (max-width:970px) {
+    .login-session{
+        overflow: auto;
+    }
+    .login-session .graphics-div{
+        display: none;
+    }
+    .login-session .login-div{
+        width:100%;
+    }
+    .login-session .login-div .form-back-div .form-div .logo-div{
+        display: block;
+    }
+} 
+@media all and (max-width:440px) {
+    .login-session .login-div .form-back-div .form-div{
+        width: 94%;    
+    }
+    
+} 
+
+@media all and (max-width:420px) {
+    .login-session .login-div .form-back-div .form-div .top-div h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .login-session .login-div .form-back-div .form-div .inner-form .btn-div{
+		flex-direction: column;
+		gap: 15px;
+	}
+    .login-session .login-div .form-back-div .form-div .inner-form .btn-div .btn{
+		width: 100%;
+	}
+    .login-session .login-div .form-back-div .form-div .inner-form .btn-div .notification-div{
+		display: flex;
+		align-self: flex-start;
+		justify-self: flex-start;
+	}
+}

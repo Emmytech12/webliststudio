@@ -49,7 +49,6 @@
                     <img src="<?php echo $website_url?>/all-images/body-pix/services.svg" alt="<?php echo $thename?> Company" />
                 </div>
             </div>
-           
         </div>
     </section>
 
@@ -81,6 +80,7 @@
 
                     <div class="left-div">
                         <div class="page-list-back-div">
+                            <a href="<?php echo $website_url?>/blog/maximizing-business-efficiency-through-custom-software-development" title="Maximizing Business Efficiency Through Custom Software Development">
                             <div class="main-blog-div">
                                 <div class="top-text">Hosting</div>
                                 <div class="image-div">
@@ -96,8 +96,9 @@
                                         <button class="btn" title="Read More">Read More <i class="bi-arrow-right"></i></button></a>
                                     </div>
                                 </div>
-                            </div>
+                            </div></a>
 
+                            <a href="<?php echo $website_url?>" title="Enhancing Digital Transformation with Scalable Cloud Solutions for Modern Enterprises">
                             <div class="main-blog-div">
                                 <div class="top-text">Hosting</div>
                                 <div class="image-div">
@@ -113,8 +114,9 @@
                                         <button class="btn" title="Read More">Read More <i class="bi-arrow-right"></i></button></a>
                                     </div>
                                 </div>
-                            </div>
+                            </div></a>
 
+                            <a href="<?php echo $website_url?>" title="Leveraging Cutting-Edge Cybersecurity Strategies to Protect Your Business in a Digital World">
                             <div class="main-blog-div">
                                 <div class="top-text">Hosting</div>
                                 <div class="image-div">
@@ -130,7 +132,7 @@
                                         <button class="btn" title="Read More">Read More <i class="bi-arrow-right"></i></button></a>
                                     </div>
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
                     </div>
                 </div>
@@ -146,7 +148,7 @@
 
                     <div class="list-back-div">
                         <div class="related-blog-div">
-                            <a href="<?php echo $website_url?>" title="'+ reg_title +'">
+                            <a href="<?php echo $website_url?>" title="Leveraging Cutting-Edge Cybersecurity Strategies to Protect Your Business in a Digital World">
                             <div class="top-text">Hosting</div>
                             <div class="image-div">
                                 <img src="<?php echo $website_url?>/all-images/blog/blog_3.jpeg" alt="Blog"/>
@@ -160,7 +162,7 @@
                         </div>
 
                         <div class="related-blog-div">
-                            <a href="<?php echo $website_url?>" title="'+ reg_title +'">
+                            <a href="<?php echo $website_url?>" title="Enhancing Digital Transformation with Scalable Cloud Solutions for Modern Enterprises">
                             <div class="top-text">Hosting</div>
                             <div class="image-div">
                                 <img src="<?php echo $website_url?>/all-images/blog/blog_2.png" alt="Blog"/>
@@ -174,7 +176,7 @@
                         </div>
 
                         <div class="related-blog-div">
-                            <a href="<?php echo $website_url?>" title="'+ reg_title +'">
+                            <a href="<?php echo $website_url?>" title="Maximizing Business Efficiency Through Custom Software Development">
                             <div class="top-text">Hosting</div>
                             <div class="image-div">
                                 <img src="<?php echo $website_url?>/all-images/blog/blog_1.jpg" alt="Blog"/>

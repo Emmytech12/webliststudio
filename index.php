@@ -857,7 +857,7 @@
                                             class="bi-eye-fill"></i> 250 VIEWS</div>
                                     <h3>Maximizing Business Efficiency Through Custom Software Development</h3>
 
-                                    <a href="<?php echo $website_url?>" title="Read More">
+                                    <a href="<?php echo $website_url?>/blog/maximizing-business-efficiency-through-custom-software-development" title="Maximizing Business Efficiency Through Custom Software Development">
                                         <button class="btn" title="Read More">Read More <i
                                                 class="bi-arrow-right"></i></button></a>
                                 </div>

@@ -154,6 +154,12 @@ function isNumber_Check(textID) {
 }
 
 
+function _view_preview_img(divid) {
+	const view_pix = $("#" + divid).html();
+	$("#blog_preview").html(view_pix).fadeIn(3000);
+}
+
+
 function _selectOption(selectBoxId) {
 	$('#txtSearchValue_'+selectBoxId).val('');
 	filter(selectBoxId);
