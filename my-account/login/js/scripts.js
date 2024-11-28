@@ -65,29 +65,6 @@ function _next_page(next_id) {
 }
 
 
-function _show_password_visibility(ids,toggle_pass){
-	var password = $('#'+ids).val();
-	if (password!='') {
-	 $('#'+toggle_pass).show();
-	} else {
-		$('#'+toggle_pass).hide();
-	}
-}
-
-function _togglePasswordVisibility(ids, toggle_pass) {
-	const passwordInput = document.getElementById(ids);
-	const togglePasswordIcon = document.getElementById(toggle_pass);
-
-	if (passwordInput.type === 'password') {
-		passwordInput.type = 'text';
-		togglePasswordIcon.innerHTML = '<i class="bi-eye password-toggle"></i>';
-	} else {
-	passwordInput.type = 'password';
-	togglePasswordIcon.innerHTML = '<i class="bi-eye-slash password-toggle"></i>';
-	}
-}
-
-
 function isNumber_Check(e) {
     var key = e.keyCode || e.which;
 

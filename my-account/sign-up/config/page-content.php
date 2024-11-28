@@ -32,7 +32,7 @@
             </div> 
 
             <button class="btn" id="" title="Sign Up" onclick="">Sign Up <i class="bi-check"></i></button>
-            <div class="forgot-pass sign-forgot-pass">Already have an account? <a href="<?php echo $website_url?>/login"><span> Log-In</span></div></a>
+            <div class="forgot-pass sign-forgot-pass">Already have an account? <a href="<?php echo $website_url?>/my-account/login"><span> Log-In</span></div></a>
         </div>
         <div class="bottom-container">Google reCAPTCHA used. <span>Privacy Policy </span> and <span>Terms of Service</span> apply.</div>
     </div>

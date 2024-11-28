@@ -71,8 +71,6 @@
  
 
 
-
-
 .login-session .login-div{
     position: absolute;
     width:50%;
@@ -300,33 +298,6 @@
 	margin: 5px auto;
 }
 
-
-.text_field_container .password-container {
-	position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none; 
-    cursor: pointer;
-    z-index: 100;
-}
-
-.text_field_container .lock-container {
-	position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block; 
-    cursor: pointer;
-    z-index: 100;
-}
-
-.text_field_container .bi-eye-slash {
-    font-size: 15px;
-    color: #999;
-}
-
-
 .login-session .login-div .form-back-div .form-div .inner-form .pswd_info{
 	font-size: 11px;
 	font-family: body-font;
@@ -346,15 +317,12 @@
     .login-session .login-div{
         width:100%;
     }
-    .login-session .login-div .form-back-div .form-div .logo-div{
-        display: block;
-    }
 } 
+
 @media all and (max-width:440px) {
     .login-session .login-div .form-back-div .form-div{
         width: 94%;    
     }
-    
 } 
 
 @media all and (max-width:420px) {

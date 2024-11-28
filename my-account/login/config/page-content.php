@@ -23,7 +23,7 @@
             <button class="btn" id="" title="Log In" onclick="">Log In <i class="bi-check"></i></button>
             <div class="forgot-pass" onclick="_next_page('reset_password_info');">Forgot Password?</div>
         </div>
-        <p>Don't have an account? <a href="<?php echo $website_url?>/sign-up"><span>Sign-Up</span></p></a>
+        <p>Don't have an account? <a href="<?php echo $website_url?>/my-account/sign-up"><span>Sign-Up</span></p></a>
         <div class="bottom-container">Google reCAPTCHA used. <span>Privacy Policy </span> and <span>Terms of Service</span> apply.</div>
     </div>    
 
@@ -58,7 +58,7 @@
             </div>
 
             <div class="btn-div">
-                <button class="btn" type="button" id="submit_btn" title="Okay" onclick="location.href='<?php echo $website_url?>/login/reset-password'"> 
+                <button class="btn" type="button" id="submit_btn" title="Okay" onclick="location.href='<?php echo $website_url?>/my-account/login/reset-password'"> 
                     OKAY <i class="bi-check2-all"></i>
                 </button>                          
                 <div class="notification"><strong>MAIL</strong> not received? <span><i class="bi-send"></i> <strong> RESEND MAIL </strong></span></div>                             
@@ -75,7 +75,7 @@
                 <img src="<?php echo $website_url?>/all-images/images/success.gif" alt="successful gif">
             </div>
             <h3>PASSWORD RESET SUCCESSFULLY</h3>
-            <button class="btn" onclick="location.href='<?php echo $website_url?>/login'">OKAY <i class="bi-check2-all"></i></button>
+            <button class="btn" onclick="location.href='<?php echo $website_url?>/my-account/login'">OKAY <i class="bi-check2-all"></i></button>
         </div> 
     </div>
 <?php }?>

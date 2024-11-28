@@ -1,5 +1,5 @@
-<?php include '../../config/constants.php';?>
-<?php $access_key = $_GET['ref']; ?>
+<?php include '../../../config/constants.php';?>
+<?php //$access_key = $_GET['ref']; ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http: //www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -35,17 +35,15 @@
                     </div>
                     
                     <div class="text_field_container">
-                        <input class="text_field" type="password" id="password" onkeyup="_show_password_visibility('password','login_pass')" placeholder=""/>                 
+                        <input class="text_field" type="password" id="password" placeholder=""/>                 
                         <div class="placeholder">Create New Password:</div>
-                        <div class="password-container" id="login_pass" onclick="_togglePasswordVisibility('password','login_pass')">
-                            <i class="bi-eye-slash password-toggle"></i>
-                        </div>
                     </div>
                 
                     <div class="text_field_container">
-                        <input class="text_field" type="password" id="confirm_password" onkeyup="_check_password_match()" placeholder=""/>                 
+                        <input class="text_field" type="password" id="confirm_password" placeholder=""/>                 
                         <div class="placeholder">Comfirm New Password:</div>        
                     </div> 
+
                     <div class="pswd_info"><em>At least 8 charaters required including upper & lower cases and special characters and numbers.</em></div>
 
                     <button class="btn" id="" title="eset Password" onclick="_passwordResetSuccesful('password_reset_successful');">Reset Password <i class="bi-check"></i></button>
