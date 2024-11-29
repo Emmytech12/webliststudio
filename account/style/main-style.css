@@ -57,8 +57,8 @@
 .login-session .graphics-div .content h2{
     color: var(--white-color);
     text-align: center;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 35px;
+    line-height: 40px;
     padding: 0px;
     margin: 0px;
     font-family: title-font;
@@ -66,7 +66,6 @@
 
 .login-session .graphics-div .content h2 span{
     color: var(--secondary-color);
-    font-family: body-font;
 }
  
 
@@ -122,7 +121,8 @@
     display: flex;
     flex-direction: column;
     border-bottom: #b8b8b8 1px solid;
-    padding-bottom: 10px;   
+    padding-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 .login-session .login-div .form-back-div .form-div .email-form{

@@ -9,7 +9,9 @@
 <link href="<?php echo $website_url?>/style/animate.css" type="text/css" rel="stylesheet" media="all">
 <link href="<?php echo $website_url?>/style/aos.css" type="text/css" rel="stylesheet" />
 <link href="<?php echo $website_url?>/style/paramount.css?v=<?php echo $code_version?>" type="text/css" rel="stylesheet" />
-<link href="<?php echo $website_url?>/my-account/login/style/main-style.css?v=<?php echo $code_version?>" type="text/css" rel="stylesheet" />
+<link href="<?php echo $website_url?>/account/style/main-style.css?v=<?php echo $code_version?>" type="text/css" rel="stylesheet" />
+<link href="<?php echo $website_url?>/account/style/dashboard-style.css?v=<?php echo $code_version?>" type="text/css" rel="stylesheet" />
 
-<script src="<?php echo $website_url?>/my-account/sign-up/js/jquery-v3.6.1.min.js"></script>
-<script src="<?php echo $website_url?>/my-account/sign-up/js/scripts.js?v=<?php echo $code_version?>"></script>
+
+<script src="<?php echo $website_url?>/js/jquery-v3.6.1.min.js"></script>
+<script src="<?php echo $website_url?>/account/js/scripts.js?v=<?php echo $code_version?>"></script>

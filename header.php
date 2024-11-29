@@ -210,7 +210,7 @@
                     </li>   
                 </ul>
 
-                <a href="<?php echo $website_url?>/my-account/login" title="Client Area">         
+                <a href="<?php echo $website_url?>/account/login" title="Client Area">         
                 <button class="btn" title="Client Area"><i class="bi-person-fill"></i> Client Area</button></a>
                 <button class="mobile-btn" onclick="_open_menu()"><i class="bi-text-right"></i></button>
             </nav>

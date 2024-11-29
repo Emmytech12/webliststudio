@@ -1,25 +1,22 @@
-<?php include '../../../config/constants.php';?>
+<?php include '../config/constants.php';?>
+<?php include 'config/functions.php';?>
 <?php //$access_key = $_GET['ref']; ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http: //www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <?php include '../meta.php'?>
+    <?php include 'meta.php'?>
     <title><?php echo $thename?>  | Adminstrative Reset Password</title>
     <meta name="keywords" content="Adminstrative Reset Password - <?php echo $thename?>" />
     <meta name="description" content="Adminstrative Reset Password <?php echo $thename?>"/>
 </head>
 <body>
-    <?php  include '../alert.php'?>
+    <?php  include 'alert.php'?>
 
     <section class="login-session">
     <div class="graphics-div">
-        <div class="content" data-aos="fade-left" data-aos-duration="800">
-            <div class="logo-div"><img src="<?php echo $website_url?>/all-images/images/logo.png" alt="<?php echo $thename?> Logo"/></div>
-            <div class="graphics" data-aos="fade-left" data-aos-duration="1200"><img src="<?php echo $website_url?>/all-images/body-pix/login-img.png" alt="Login"/></div>
-            <h2>Manage Your Hosting with Ease<br> <span>Right at Your Fingertips!</span></h2>
-        </div>
+    <?php $callclass-> _loginSidePane($website_url, $thename);?>
     </div>
 
     <div class="login-div">
@@ -54,7 +51,7 @@
     </div>
 </section>
 
-    <?php include '../bottom-scripts.php'?>
+    <?php include 'bottom-scripts.php'?>
 </body>
 </html>
 

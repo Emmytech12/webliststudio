@@ -64,6 +64,7 @@ function _next_page(next_id) {
     $("#" + next_id).fadeIn(1000);
 }
 
+
 function isNumber_Check(e) {
     var key = e.keyCode || e.which;
 
@@ -75,7 +76,58 @@ function isNumber_Check(e) {
         }
     }
 }
- 
+
+
+function _closeNav(){
+	$('.side-nav-bg-sub-div').animate({'left':'-100%'},400);
+    $('#side-nav-div').animate({'left':'-100px'},200);
+}
+
+function _closeAllNav(){
+	_closeNav();
+	_removeClass();
+}
+
+function _removeClass(){
+	$('#side-dashboard, #side-staff, #side-blog').removeClass('active-li');
+}
+
+function _getNav(nav){
+	if(nav==''){
+		_closeNav();
+	}else{
+	   	$('#link-staff').css({'display':'none'});
+		$('#link-'+nav).css({'display':'block'});
+	   	$('.side-nav-bg-sub-div').animate({'left':'100px'},200);
+	}
+}
+
+
+function _getActiveLink(divid, nav) {
+	_removeClass()
+
+	$('#side-'+divid).addClass('active-li');
+	$("#page-title").html($("#_" + divid).html());
+
+	_getNav(nav);
+}
+
+
+function _getPage(page, divid, nav) {
+	_getActiveLink(divid, nav);
+	$("#page-content").html('<div class="ajax-loader"><img src="'+ website_url +'/admin/a/all-images/images/spinner.gif" alt="Loading"/></div>').fadeIn("fast");
+		const action = "get_page";
+		const dataString = "action=" + action + "&page=" + page;
+		$.ajax({
+		type: "POST",
+		url: admin_login_local_url,
+		data: dataString,
+		cache: false,
+		success: function (html) {
+			$("#page-content").html(html);
+		},
+	});
+}
 
 
 function _get_form(page) {
@@ -84,7 +136,7 @@ function _get_form(page) {
 	var dataString = "action=" + action + "&page=" + page;
 	$.ajax({
 	  type: "POST",
-	  url: agent_login_local_url,
+	  url: admin_login_local_url,
 	  data: dataString,
 	  cache: false,
 	  success: function (html) { 

@@ -12,7 +12,7 @@
             
             <div class="text_field_container">
                 <input class="text_field" type="email" id="email" placeholder=""/>
-                <div class="placeholder">Email Your Email Address:</div>
+                <div class="placeholder">Enter Your Email Address:</div>
             </div>
                 
             <div class="text_field_container">
@@ -20,10 +20,10 @@
                 <div class="placeholder">Enter Your Password:</div>
             </div> 
 
-            <button class="btn" id="" title="Log In" onclick="">Log In <i class="bi-check"></i></button>
+            <button class="btn" id="" title="Log In" onclick="location.href='<?php echo $website_url?>/account/dashboard'">Log In <i class="bi-check"></i></button>
             <div class="forgot-pass" onclick="_next_page('reset_password_info');">Forgot Password?</div>
         </div>
-        <p>Don't have an account? <a href="<?php echo $website_url?>/my-account/sign-up"><span>Sign-Up</span></p></a>
+        <p>Don't have an account? <a href="<?php echo $website_url?>/account/sign-up"><span>Sign-Up</span></p></a>
         <div class="bottom-container">Google reCAPTCHA used. <span>Privacy Policy </span> and <span>Terms of Service</span> apply.</div>
     </div>    
 
@@ -39,11 +39,11 @@
             
             <div class="text_field_container">
                 <input class="text_field" type="email" id="email" placeholder=""/>
-                <div class="placeholder">Email Your Email Address:</div>
+                <div class="placeholder">Enter Your Email Address:</div>
             </div>
                             
             <button class="btn" id="" title="Proceed" onclick="_next_page('send_link_info');">Proceed <i class="bi-arrow-right"></i></button>
-            <div class="forgot-pass" onclick="_next_page('view_login');">Already have an account?</div>
+            <div class="forgot-pass sign-forgot-pass">Already have an account? <span onclick="_next_page('view_login');"> Log-In</span></div>
         </div>
         <div class="bottom-container">Google reCAPTCHA used. <span>Privacy Policy </span> and <span>Terms of Service</span> apply.</div>
     </div>  
@@ -58,7 +58,7 @@
             </div>
 
             <div class="btn-div">
-                <button class="btn" type="button" id="submit_btn" title="Okay" onclick="location.href='<?php echo $website_url?>/my-account/login/reset-password'"> 
+                <button class="btn" type="button" id="submit_btn" title="Okay" onclick="location.href='<?php echo $website_url?>/account/reset-password'"> 
                     OKAY <i class="bi-check2-all"></i>
                 </button>                          
                 <div class="notification"><strong>MAIL</strong> not received? <span><i class="bi-send"></i> <strong> RESEND MAIL </strong></span></div>                             
@@ -75,7 +75,47 @@
                 <img src="<?php echo $website_url?>/all-images/images/success.gif" alt="successful gif">
             </div>
             <h3>PASSWORD RESET SUCCESSFULLY</h3>
-            <button class="btn" onclick="location.href='<?php echo $website_url?>/my-account/login'">OKAY <i class="bi-check2-all"></i></button>
+            <button class="btn" onclick="location.href='<?php echo $website_url?>/account/login'">OKAY <i class="bi-check2-all"></i></button>
         </div> 
     </div>
+<?php }?>
+
+
+
+<?php if($page=='sign-up'){?>
+    <div class="form-div animated fadeIn" id="view_login" data-aos="fade-right" data-aos-duration="1600">
+        <div class="top-div">
+            <h1>👋Account Sign Up!</h1>                   
+        </div>
+        
+        <div class="inner-form">
+            <div class="alert alert-success">
+                Kindly fill the following information to complete your registration.
+            </div>
+            
+            <div class="text_field_container">
+                <input class="text_field" type="email" id="email" placeholder=""/>
+                <div class="placeholder">Enter Your Full Name:</div>
+            </div>
+
+            <div class="text_field_container">
+                <input class="text_field" type="email" id="email" placeholder=""/>
+                <div class="placeholder">Enter Your Email Address:</div>
+            </div>
+                
+            <div class="text_field_container">
+                <input class="text_field" type="email" id="email" placeholder=""/>
+                <div class="placeholder">Create a New Password:</div>
+            </div> 
+
+            <div class="text_field_container">
+                <input class="text_field" type="email" id="email" placeholder=""/>
+                <div class="placeholder">Confirm New Password:</div>
+            </div> 
+
+            <button class="btn" id="" title="Sign Up" onclick="">Sign Up <i class="bi-check"></i></button>
+            <div class="forgot-pass sign-forgot-pass">Already have an account? <a href="<?php echo $website_url?>/account/login"><span> Log-In</span></div></a>
+        </div>
+        <div class="bottom-container">Google reCAPTCHA used. <span>Privacy Policy </span> and <span>Terms of Service</span> apply.</div>
+    </div>       
 <?php }?>
