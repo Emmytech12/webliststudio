@@ -30,11 +30,11 @@
 
             <div class="toggle-profile-div">
                 <div class="toggle-div-in">
-                    <div class="toggle-profile-pix-div"></div>
+                    <div class="toggle-profile-pix-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="<?php echo $thename?>" /></div>
                     <div class="header-content">
-                        <div class="toggle-profile-name"><span id="pro_header_fullname">Loading...</span></div>
-                        <div class="toggle-profile-others">User ID: <span id="pro_header_staff_id">Loading...</span></div>
-                        <div class="toggle-profile-others">Phone: <span id="pro_header_phone">Loading...</span></div>
+                        <div class="toggle-profile-name"><span>Hon Paul Emmanuel</span></div>
+                        <div class="toggle-profile-others">User ID: <span>STF0012029210002</span></div>
+                        <div class="toggle-profile-others">Phone: <span>090818392647</span></div>
                         <div class="btn-div">
                             <button class="btn" title="Log-Out" type="button" onclick="_get_form('logout_confirm_form');"><i class="bi-box-arrow-in-right"></i> Log-Out</button>
                             <button class="btn" title="View Profile" type="button" onclick="_get_form_with_id('my_profile','<?php echo $login_staff_id?>');"><i class="bi-person"></i> Profile</button>

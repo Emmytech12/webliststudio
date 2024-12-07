@@ -10,8 +10,6 @@ function _loginSidePane($website_url, $thename){?>
         </div>
 <?php }
 
-
 }//end of class
 $callclass=new allClass();
-
 ?>

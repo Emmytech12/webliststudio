@@ -65,6 +65,20 @@ function _next_page(next_id) {
 }
 
 
+function _toggle_profile_pix_div() {
+	$(".toggle-profile-div").toggle("slow");
+}
+
+function select_search() {
+	$(".srch-select").toggle("fast");
+}
+  
+function srch_custom(text){
+	$('#srch-text').html(text);
+	$('.custom-srch-div').fadeIn(500);
+};
+
+
 function isNumber_Check(e) {
     var key = e.keyCode || e.which;
 
@@ -78,6 +92,36 @@ function isNumber_Check(e) {
 }
 
 
+
+function updatePercentage(container, targetValue) {
+    const circleElement = container.querySelector('.circle');
+    const percentageElement = container.querySelector('.percentage');
+
+    percentageElement.textContent = `${targetValue}%`;
+
+    circleElement.classList.remove('red', 'orange', 'yellow', 'blue', 'green');
+
+    if (targetValue < 1 || (targetValue >= 1 && targetValue <= 15)) {
+        circleElement.classList.add('red');
+    } else if (targetValue > 15 && targetValue <= 30) {
+        circleElement.classList.add('orange');
+    } else if (targetValue > 30 && targetValue <= 50) {
+        circleElement.classList.add('yellow');
+    } else if (targetValue > 50 && targetValue <= 80) {
+        circleElement.classList.add('blue');
+    } else if (targetValue > 80) {
+        circleElement.classList.add('green');
+    }
+}
+
+
+	
+
+
+
+
+
+
 function _closeNav(){
 	$('.side-nav-bg-sub-div').animate({'left':'-100%'},400);
     $('#side-nav-div').animate({'left':'-100px'},200);
@@ -89,14 +133,14 @@ function _closeAllNav(){
 }
 
 function _removeClass(){
-	$('#side-dashboard, #side-staff, #side-blog').removeClass('active-li');
+	$('#side-dashboard, #side-staff, #side-user, #side-domain, #side-hosting, #side-blog, #side-faq, #side-report').removeClass('active-li');
 }
 
 function _getNav(nav){
 	if(nav==''){
 		_closeNav();
 	}else{
-	   	$('#link-staff').css({'display':'none'});
+	   	$('#link-domain, #link-hosting').css({'display':'none'});
 		$('#link-'+nav).css({'display':'block'});
 	   	$('.side-nav-bg-sub-div').animate({'left':'100px'},200);
 	}
@@ -115,50 +159,57 @@ function _getActiveLink(divid, nav) {
 
 function _getPage(page, divid, nav) {
 	_getActiveLink(divid, nav);
-	$("#page-content").html('<div class="ajax-loader"><img src="'+ website_url +'/admin/a/all-images/images/spinner.gif" alt="Loading"/></div>').fadeIn("fast");
+	if(page==''){
+		//do nothing
+	}else{
+		$("#page-content").html('<div class="ajax-loader"><img src="'+ website_url +'/all-images/images/spinner.gif"/></div>').fadeIn(500);
 		const action = "get_page";
 		const dataString = "action=" + action + "&page=" + page;
+
 		$.ajax({
-		type: "POST",
-		url: admin_login_local_url,
-		data: dataString,
-		cache: false,
-		success: function (html) {
-			$("#page-content").html(html);
-		},
-	});
+			type: "POST",
+			url: admin_login_local_url,
+			data: dataString,
+			cache: false,
+			success: function (html) {
+				$("#page-content").html(html);
+			},
+		});
+	}
 }
 
 
 function _get_form(page) {
 	$("#get-more-div").html('<div class="ajax-loader"><img src="'+website_url+'/all-images/images/ajax-loader.gif"/></div>').css({'display': 'flex','justify-content': 'center','align-items': 'center'}).fadeIn(500);
-	var action = "get_form";
-	var dataString = "action=" + action + "&page=" + page;
+	const action = "get_form";
+	const dataString = "action=" + action + "&page=" + page;
+	
 	$.ajax({
-	  type: "POST",
-	  url: admin_login_local_url,
-	  data: dataString,
-	  cache: false,
-	  success: function (html) { 
-		$("#get-more-div").html(html);
-	  },
+		type: "POST",
+		url: admin_login_local_url,
+		data: dataString,
+		cache: false,
+		success: function (html) { 
+			$("#get-more-div").html(html);
+		},
 	});
-  }
+}
   
+
 function _passwordResetSuccesful(page) {
 	$("#get-more-div").css({'display': 'flex','justify-content': 'center','align-items': 'center'}) .fadeIn(500);
 	const action = "password_reset_successful";
 	const dataString = "action=" + action + "&page=" + page;
+
 	$.ajax({
-	  type: "POST",
-	  url: admin_login_local_url,
-	  data: dataString,
-	  cache: false,
-	  success: function (html) { 
-		$("#get-more-div").html(html);
-	  },
+		type: "POST",
+		url: admin_login_local_url,
+		data: dataString,
+		cache: false,
+		success: function (html) { 
+			$("#get-more-div").html(html);
+		},
 	});
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-

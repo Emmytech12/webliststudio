@@ -3333,35 +3333,6 @@ header .header-div-in nav .mobile-btn:hover{
 
 
 
-/* Search Style */
-.search-text-div{
-	width:900px;
-	min-height:60px;
-	margin:-30px auto;
-	background:var(--white-color);
-	box-shadow:0px 5px 10px 1px rgba(0,0,0,.2);
-	position:relative;
-	border-radius:5px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-
-.faq_left_text_field_container{
-	margin-bottom: 0px;
-}
-
-.faq_right_text_field_container{
-	margin-bottom: 0px;
-}
-
-@media all and (max-width:930px) {
-	.search-text-div{
-		width:94%;
-	}
-}
-
 
 
 
@@ -3370,7 +3341,6 @@ header .header-div-in nav .mobile-btn:hover{
 
 
 /* Main Blog Page Style */
-
 .blog-body-div{
 	padding-bottom: 50px;
 	background: #fcfcfc;

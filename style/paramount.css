@@ -236,7 +236,6 @@ a {
 	display:none;
 }
 
-
 .alert-loading-div{
 	min-height: 50px;
 	padding: 0px 20px;
@@ -261,25 +260,9 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	top: 70%;
-	left: 50%;
-	transform: translate(-70%, -50%);
-	overflow: hidden;
-	z-index: 700;
-}
-
-.blog-ajax-loader {
-	position: absolute;
-	width: 75px;
-	height: 75px;
-	border-radius: 10px;
-	background: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	top: 50%;
-	left: 35%;
-	transform: translate(-35%, -50%);
+	left: 50%;
+	transform: translate(-50%, -50%);
 	overflow: hidden;
 	z-index: 700;
 }
@@ -311,8 +294,8 @@ a {
 	z-index:300;
 }
 .live-help-div:hover{
-		-moz-transform:scale(1.1) translate(1px,0px);
-		-webkit-transform:scale(1.1) translate(1px,0px);
+	-moz-transform:scale(1.1) translate(1px,0px);
+	-webkit-transform:scale(1.1) translate(1px,0px);
 }
 
 .live-help-div .pix-div{
