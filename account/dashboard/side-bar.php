@@ -18,16 +18,16 @@
             <div class="hidden" id="_staff"><i class="bi-people"></i> Active Staff</div>
         </div>   
 
-        <div class="nav-div" title="Users" onClick="_getPage('user','user','')" id="side-user">
+        <div class="nav-div" title="Users" onClick="_getPage('users','users','')" id="side-users">
             <div class="icon"><i class="bi-people"></i> Users</div> 
-            <div class="hidden" id="_user"><i class="bi-speedometer2"></i> Active Staff</div>
+            <div class="hidden" id="_users"><i class="bi-speedometer2"></i> Active Staff</div>
         </div>       
 
-        <div class="nav-div" title="Blog" onClick="_getPage('','blog', 'blog')" id="side-blog">
+        <div class="nav-div" title="Blog" onClick="_getPage('blog','blog', '')" id="side-blog">
             <div class="icon"><i class="bi-journals"></i> Blog</div> 
         </div> 
 
-        <div class="nav-div" title="FAQ" onClick="_getPage('','faq', 'faq')" id="side-faq">
+        <div class="nav-div" title="FAQ" onClick="_getPage('faq','faq', '')" id="side-faq">
             <div class="icon" ><i class="bi-patch-question"></i> FAQ</div> 
         </div>
 
@@ -54,18 +54,18 @@
 
 <div class="side-nav-bg-sub-div">
 	<div class="nav-div animated fadeInLeft" id="link-domain">
-        <div class="link" onClick="_getPage('domain','domain','')">- Active Domain <div class="num" id="total_active_staff_count">0</div></div>
+        <div class="link" onclick="_getPage('domain','domain','');">- Active Domain <div class="num" id="total_active_staff_count">0</div></div>
         <div class="hidden" id="_domain"><i class="bi-people"></i> All Active Domain</div>
 
-        <div class="link" onClick="_getPage('suspended_staff','suspended_staff','staff','')">- Domain Packages <div class="num" id="total_suspended_staff_count">0</div></div>
+        <div class="link" onclick="_getPage('suspended_staff','suspended_staff','staff','');">- Domain Packages <div class="num" id="total_suspended_staff_count">0</div></div>
         <div class="hidden" id="_suspended_staff"><i class="fa fa-users"></i> Supended Staff</div>
     </div>
 
     <div class="nav-div animated fadeInLeft" id="link-hosting">
-        <div class="link" onClick="_getPage('domain','domain','domain','')">- Active Hosting <div class="num" id="total_active_staff_count">0</div></div>
+        <div class="link" onclick="_getPage('hosting','hosting','');">- Active Hosting <div class="num" id="total_active_staff_count">0</div></div>
         <div class="hidden" id="_staff"><i class="bi-people"></i> All Active Hosting</div>
 
-        <div class="link" onClick="_getPage('suspended_staff','suspended_staff','staff','')">- Hosting Packages <div class="num" id="total_suspended_staff_count">0</div></div>
+        <div class="link" onclick="_getPage('suspended_staff','suspended_staff','staff','')">- Hosting Packages <div class="num" id="total_suspended_staff_count">0</div></div>
         <div class="hidden" id="_suspended_staff"><i class="fa fa-users"></i> Supended Staff</div>
     </div>
 

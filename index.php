@@ -1,9 +1,7 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http: //www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <?php include 'config/constants.php';?>
 <?php include 'config/functions.php';?>
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http: //www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
     <?php include 'meta.php'?>
     <title><?php echo $thename?> | Custom Website Development and SEO Services in USA</title>
@@ -138,7 +136,7 @@
                                     <li onclick="_clickOption('searchList_searchDomainExt', '.com', '.net')">.net</li>
                                     <li onclick="_clickOption('searchList_searchDomainExt', '.com', '.org')">.org</li>
                                     <li onclick="_clickOption('searchList_searchDomainExt', '.com', '.app')">.app</li>
-                                    <li onclick="_clickOption('searchList_searchDomainExt', '.com', '.app')">.ng</li>
+                                    <li onclick="_clickOption('searchList_searchDomainExt', '.com', '.ng')">.ng</li>
                                 </ul>
                             </div>
                         </div>

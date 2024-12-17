@@ -1,4 +1,4 @@
-<?php  include 'alert.php'?>
+<?php  include '../alert.php'?>
 <header class="fadeInDown animated">
     <div class="header-div-in"> 
         <div class="logo-div"><img src="<?php echo $website_url?>/all-images/images/logo.png" alt="<?php echo $thename?> logo" /></div>
@@ -9,7 +9,7 @@
                     <i class="bi-search"></i>
                 </div>
 
-                <div class="icon-div" onClick="_get_form('app_settings');" title="System Settings">
+                <div class="icon-div" onClick="_getPage('settings', 'settings', '');" title="System Settings">
                     <i class="bi-gear"></i>
                 </div>
                 <div class="icon-div bell_notification" onClick="_get_page('system_alert');" title="System Alert">
@@ -30,7 +30,7 @@
 
             <div class="toggle-profile-div">
                 <div class="toggle-div-in">
-                    <div class="toggle-profile-pix-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="<?php echo $thename?>" /></div>
+                    <div class="toggle-profile-pix-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="<?php echo $thename?>"/></div>
                     <div class="header-content">
                         <div class="toggle-profile-name"><span>Hon Paul Emmanuel</span></div>
                         <div class="toggle-profile-others">User ID: <span>STF0012029210002</span></div>

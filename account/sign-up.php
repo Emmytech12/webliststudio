@@ -1,6 +1,6 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http: //www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php include '../config/constants.php';?>
 <?php include 'config/functions.php';?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http: //www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <?php include 'meta.php'?>
@@ -30,7 +30,7 @@
     <div class="login-div">
         <div class="form-back-div">
             <?php $page='sign-up';?>
-            <?php include 'config/page-content.php';?>
+            <?php include 'content/page-content.php';?>
         </div>
     </div>
 </section>

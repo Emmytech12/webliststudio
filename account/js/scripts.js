@@ -38,8 +38,6 @@ function alert_close(){
 	$('#get-more-div').html('').fadeOut(200);
 }
 
-
-
 function _actionAlert(message,status ){
 	let text = '';
 	$('.all-alert-back-div').html(text).css('display', 'flex');
@@ -57,6 +55,26 @@ function _actionAlert(message,status ){
 		'</div>';
 	}
 	$('.all-alert-back-div').html(text).fadeIn(500).delay(3000).fadeOut(100);
+}
+
+function _alertClose(){
+	let text = '';
+	  text +=
+	  '<div class="alert-loading-div">' +
+		'<div class="icon"><img src="'+ website_url +'/all-images/images/loading.gif" width="20px" alt="Loading"/></div>' +
+		'<div class="text"><p>LOADING...</p></div>'+
+		'</div>';
+	$('#get-more-div').html(text).fadeOut(200);
+}
+
+function _alert_secondary_close(){
+  let text = '';
+	text +=
+	'<div class="alert-loading-div">' +
+	  '<div class="icon"><img src='+ website_url +'/all-images/images/loading.gif" width="20px" alt="Loading"/></div>' +
+	  '<div class="text"><p>LOADING...</p></div>'+
+	  '</div>';
+  $('#get-more-div-secondary').html(text).fadeOut(200);
 }
 
 function _next_page(next_id) {
@@ -116,6 +134,19 @@ function updatePercentage(container, targetValue) {
 
 
 	
+function _nextPage(next_id, icon, divid) {
+	$("#account_settings_id,#account_detail,#change_password").hide();
+	$("#" + next_id).fadeIn(1000);
+	$("#panel-title").html($("#" + icon).html() + $("#" + divid).html());
+}
+  
+function _prevPage(next_id) {
+	$("#account_settings_id,#account_detail,#change_password").hide();
+	$("#" + next_id).fadeIn(1000);
+	$("#panel-title").html(
+	  '<i class="bi-gear"></i> </span id="app_text"> APP SETTINGS'
+	);
+}
 
 
 
@@ -133,7 +164,7 @@ function _closeAllNav(){
 }
 
 function _removeClass(){
-	$('#side-dashboard, #side-staff, #side-user, #side-domain, #side-hosting, #side-blog, #side-faq, #side-report').removeClass('active-li');
+	$('#side-dashboard, #side-staff, #side-users, #side-domain, #side-hosting, #side-blog, #side-faq, #side-report').removeClass('active-li');
 }
 
 function _getNav(nav){
@@ -178,23 +209,73 @@ function _getPage(page, divid, nav) {
 	}
 }
 
-
-function _get_form(page) {
-	$("#get-more-div").html('<div class="ajax-loader"><img src="'+website_url+'/all-images/images/ajax-loader.gif"/></div>').css({'display': 'flex','justify-content': 'center','align-items': 'center'}).fadeIn(500);
-	const action = "get_form";
-	const dataString = "action=" + action + "&page=" + page;
-	
-	$.ajax({
+function _getForm(page) {
+	$("#get-more-div").css({'display': 'flex','justify-content': 'center','align-items': 'center'}) .fadeIn(500);
+		const action = "get_form";
+		const dataString = "action=" + action + "&page=" + page;
+		$.ajax({
 		type: "POST",
 		url: admin_login_local_url,
 		data: dataString,
 		cache: false,
-		success: function (html) { 
+		success: function (html) {
 			$("#get-more-div").html(html);
 		},
 	});
 }
+
+
+function _getFormWithId(page, ids) {
+	$("#get-more-div").css({'display': 'flex','justify-content': 'center','align-items': 'center'}) .fadeIn(500);
+		const action = "get_form_with_id";
+		const dataString = "action=" + action + "&page=" + page + "&ids=" + ids;
+		$.ajax({
+		type: "POST",
+		url: admin_login_local_url,
+		data: dataString,
+		cache: false,
+		success: function (html) {
+			$("#get-more-div").html(html);
+		},
+	});
+}
+
+function _editPage(page, publish_id){
+	$("#get-more-div").css({'display': 'flex','justify-content': 'center','align-items': 'center'}) .fadeIn(500);
+		const action='get_edit_page_form';
+		const dataString ='action='+ action + '&page=' + page + '&publish_id=' + publish_id;
+		$.ajax({
+		type: "POST",
+		url: admin_login_local_url,
+		data: dataString,
+		cache: false,
+		success: function(html){
+			$('#get-more-div').html(html);
+		}
+	});
+}
   
+
+function _getActiveModalLink(menu_id){
+	$('#page_content, #picture_page').removeClass('active-li');
+	$('#' + menu_id).addClass('active-li');
+}
+
+function _checkPageContent(menu_id, page, publish_id) {
+	_getActiveModalLink(menu_id);
+	$('#get_pages_details').html('<div class="ajax-loader other-pages-ajax-loader"><img src="'+ website_url +'/admin/a/all-images/images/spinner.gif" alt="Loading"/></div>').fadeIn("slow");
+	const action = 'get_edit_page_form';
+	const dataString = 'action=' + action + '&page=' + page + '&publish_id=' + publish_id;
+	$.ajax({
+	  type: "POST",
+	  url: admin_login_local_url,
+	  data: dataString,
+	  cache: false,
+	  success: function (html) {
+		$('#get_pages_details').html(html);
+	  }
+	});
+}
 
 function _passwordResetSuccesful(page) {
 	$("#get-more-div").css({'display': 'flex','justify-content': 'center','align-items': 'center'}) .fadeIn(500);
@@ -211,5 +292,21 @@ function _passwordResetSuccesful(page) {
 		},
 	});
 }
+
+
+function _getFormDetails(next_id) {
+	$('#user-form-details').hide();
+	$("#" + next_id).fadeIn(1000);
+	$('#user-details, #edit_btn').fadeOut(500);
+}
+
+function filter(selectBoxId) {
+	var valThis = $('#search'+selectBoxId).val();
+	$('#fetchAll'+selectBoxId+' > tbody .tb-row, .grid-div, .faq-back-div').each(function() {
+		var text = $(this).text();
+		(text.toLowerCase().indexOf(valThis.toLowerCase()) > -1) ? $(this).show(): $(this).hide();
+    });
+ };
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

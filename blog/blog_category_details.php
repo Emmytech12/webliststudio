@@ -25,27 +25,17 @@
                 <div class="div-in">
                     <ul>
                         <a href="<?php echo $website_url?>"><li title="Home">Home <i class="bi-caret-right-fill"></i></li></a>
-                        <a href="<?php echo $website_url?>/blog"><li title="Blog & Article">Blog & Article</li></a>					
+                        <a href="<?php echo $website_url?>/blog"><li title="Blog & Article">Blog & Article <i class="bi-caret-right-fill"></i></li></a>	
+                        <a href="<?php echo $website_url?>/blog/maximizing-business-efficiency-through-custom-software-development"><li title="Maximizing Business Efficiency Through Custom Software Development">Maximizing Business Efficiency Through Custom Software Development</li></a>				
                     </ul>
                 </div>			
             </div>
 
             <div class="main-content-back-div">
-                <div class="text-content-div" data-aos="fade-in" data-aos-duration="900">
-                    <h1 data-aos="fade-in" data-aos-duration="800"><span>Latest Insight</span></h1>
+                <div class="text-content-div detail-page-text-content" data-aos="fade-in" data-aos-duration="900">
+                    <h1 data-aos="fade-in" data-aos-duration="800"><span>Maximizing Business Efficiency Through Custom Software Development</span></h1>
                     <div class="count"><i class="bi-person"></i> By: <span>Paul Emmanuel</span> &nbsp;|&nbsp; <i class="bi-calendar3"></i> DATE: <span>25 NOV 2024</span> &nbsp;|&nbsp; <i class="bi-eye"></i> VIEWS: <span>200</span> </div>
-                    <p>Stay updated with the newest trends, expert opinions, and innovative ideas shaping the future.</p>                
-                  
-                    <div class="btn-div">
-                        <a href="<?php echo $website_url?>" title="Get Started">
-                        <button class="btn" title="Get Started">Get Started <i class="bi-chevron-right"></i></button></a>
-                        <a href="tel: +1(408)8783199" title="Contact Us"> 
-                        <button class="btn right-btn" title="Contact Us">Contact Us <span> +1(408)8783199</span></button></a>
-                    </div>             
-                </div>
-
-                <div class="image-div">
-                    <img src="<?php echo $website_url?>/all-images/body-pix/services.svg" alt="<?php echo $thename?> Company" />
+                    <p>Custom software development is a game-changer for businesses aiming to streamline operations and improve efficiency. Unlike off-the-shelf solutions, custom software is tailored to your unique processes.</p>                                
                 </div>
             </div>
         </div>
