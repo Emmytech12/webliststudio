@@ -124,6 +124,7 @@
                                 onclick="_selectOption('searchDomainExt')" style="opacity: 1;">
                                 <option selected="selected" value=".com">.com</option>
                             </select>
+                            
                             <div class="placeholder">Extension</div>
                             <div class="searchPanel animated fadeIn" id="searchPanel_searchDomainExt"
                                 style="display: none;">
