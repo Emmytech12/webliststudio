@@ -260,7 +260,7 @@ function _getActiveModalLink(menu_id){
 
 function _checkPageContent(menu_id, page, publish_id) {
 	_getActiveModalLink(menu_id);
-	$('#get_pages_details').html('<div class="ajax-loader other-pages-ajax-loader"><img src="'+ website_url +'/admin/a/all-images/images/spinner.gif" alt="Loading"/></div>').fadeIn("slow");
+	$('#get_pages_details').html('<div class="ajax-loader"><img src="'+ website_url +'/all-images/images/spinner.gif" alt="Loading"/></div>').fadeIn("slow");
 	const action = 'get_edit_page_form';
 	const dataString = 'action=' + action + '&page=' + page + '&publish_id=' + publish_id;
 	$.ajax({
@@ -273,6 +273,30 @@ function _checkPageContent(menu_id, page, publish_id) {
 	  }
 	});
 }
+
+
+
+function _getUserActiveLink(menu_id){
+	$('#user_profile_details, #transaction_history, #wallet_history').removeClass('active');
+	$('#' + menu_id).addClass('active');
+}
+
+function _getUserPageContents(menu_id, page, ids) {
+	_getUserActiveLink(menu_id);
+	$('#get_user_details').html('<div class="ajax-loader other-pages-ajax-loader"><img src="'+ website_url +'/all-images/images/spinner.gif" alt="Loading"/></div>').fadeIn("slow");
+	const action = 'get_user_details';
+	const dataString = 'action=' + action + '&page=' + page + '&ids=' + ids;
+	$.ajax({
+	  type: "POST",
+	  url: admin_local_url,
+	  data: dataString,
+	  cache: false,
+	  success: function (html) {
+		$('#get_user_details').html(html);
+	  }
+	});
+}
+
 
 function _passwordResetSuccesful(page) {
 	$("#get-more-div").css({'display': 'flex','justify-content': 'center','align-items': 'center'}) .fadeIn(500);

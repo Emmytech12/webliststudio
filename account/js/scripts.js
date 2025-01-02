@@ -263,7 +263,7 @@ function _getActiveModalLink(menu_id){
 
 function _checkPageContent(menu_id, page, publish_id) {
 	_getActiveModalLink(menu_id);
-	$('#get_pages_details').html('<div class="ajax-loader other-pages-ajax-loader"><img src="'+ website_url +'/admin/a/all-images/images/spinner.gif" alt="Loading"/></div>').fadeIn("slow");
+	$('#get_pages_details').html('<div class="ajax-loader"><img src="'+ website_url +'/admin/a/all-images/images/spinner.gif" alt="Loading"/></div>').fadeIn("slow");
 	const action = 'get_edit_page_form';
 	const dataString = 'action=' + action + '&page=' + page + '&publish_id=' + publish_id;
 	$.ajax({

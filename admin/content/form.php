@@ -1290,3 +1290,71 @@
     </div>  
 <?php }?>
 
+
+<?php if ($page=='user-details-form'){?>
+    <div class="user-profile-div animated fadeInUp">
+        <div class="top-panel-div">
+            <div class="inner-top">
+                <span><i class="bi-person-check-fill"></i> USER PROFILE</span>
+                <div class="close" title="Close" onclick="_alertClose();">X</div>
+            </div>
+        </div>
+
+        <div class="profile-content-div">
+            <div class="bg-img">
+                <div class="mini-profile">
+                    <label>
+                        <div class="img-div" id="current_user_passport1">
+                            <img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Profile Image">                               
+                        </div> 
+                    </label>
+
+                    <div class="text-back-div">
+                        <div class="inner-text">
+                            <div class="text-div">
+                                <div class="name" id="staff_login_fullname">Hon. Emmanuel Paul</div>
+                                <div class="text">STATUS: <strong id="staff_status_name">ACTIVE</strong> | LAST LOGIN DATE: <strong id="last_login_time">2024-11-18 03:28:41</strong></div>                 
+                            </div>
+
+                            <div class="wallet-back-div">
+                                <div class="title"><i class="bi-credit-card"></i> Total Wallet Balance</div>
+                                <div class="wallet-div">
+                                    <div class="each-wallet-div no-border">
+                                        <div class="amount" id="wallet_balance">$500,000.00</div>
+                                        <div class="txt">Total Amount Recieved</div>
+                                    </div>
+                                
+                                    <div class="each-wallet-div">
+                                        <div class="amount" id="wallet_balance">$250,000.00</div>
+                                        <div class="txt">Total Amount spent</div>
+                                    </div>
+
+                                    <div class="each-wallet-div">
+                                        <div class="amount" id="wallet_balance">$250,000.00</div>
+                                        <div class="txt">Available Balacne</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-div">
+                <div class="div-in">
+                    <ul>
+                        <li class="active" title="User Profile" id="user_profile_details" onclick="_getUserPageContents('user_profile_details','user_profile_details','<?php echo $ids?>')"><i class="bi-person-bounding-box"></i> User Profile</li>
+                        <li title="Transaction History" id="transaction_history" onclick="_getUserPageContents('transaction_history','transaction_history','<?php echo $ids?>')"><i class="bi-credit-card"></i> Transaction History</li>
+                        <li title="Wallet History" id="wallet_history" onclick="_getUserPageContents('wallet_history','wallet_history','<?php echo $ids?>')"><i class="bi-wallet"></i> Wallet History</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="field-back-div">
+                <div id="get_user_details">
+                    <script>_getUserPageContents('user_profile_details','user_profile_details','');</script>	
+                </div>  
+            </div>
+        </div>    
+    </div> 
+<?php } ?>

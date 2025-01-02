@@ -419,10 +419,11 @@
                             <th></th>
                         </tr>
                     </thead>
+
                     <tbody>
                         <tr class="tb-row">
-                            <td class="name" title="Click to view profile" onclick="_getFormWithId('update_staff','');"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Paul Emmanuel"/></div> Paul Emmanuel</td></div>
-                            <td class="email">seuemmanuel107@gmail.com</td>
+                            <td class="first-td" title="Click to view profile" onclick="_getFormWithId('update_staff','');"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Paul Emmanuel"/></div> Paul Emmanuel</td></div>
+                            <td class="second-td">seuemmanuel107@gmail.com</td>
                             <td>Super Admin</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
@@ -436,8 +437,8 @@
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to view profile"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Arinsola Olutayo"/></div> Arinsola Olutayo</td></div>
-                            <td class="email">arinsola@gmail.com</td>
+                            <td class="first-td" title="Click to view profile"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Arinsola Olutayo"/></div> Arinsola Olutayo</td></div>
+                            <td class="second-td">arinsola@gmail.com</td>
                             <td>Admin</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div><div class="status-div active">Active</div></div></td>
@@ -451,8 +452,8 @@
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to view profile"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Paul Emmanuel"/></div> Yakubu Ezekiel</td></div>
-                            <td class="email">yakubu200@gmail.com</td>
+                            <td class="first-td" title="Click to view profile"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Paul Emmanuel"/></div> Yakubu Ezekiel</td></div>
+                            <td class="second-td">yakubu200@gmail.com</td>
                             <td>Super Admin</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div><div class="status-div active">Active</div></div></td>
@@ -466,8 +467,8 @@
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to view profile"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Balogun Samuel"/></div> Balogun Samuel</td></div>
-                            <td class="email">balogun200@gmail.com</td>
+                            <td class="first-td" title="Click to view profile"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Balogun Samuel"/></div> Balogun Samuel</td></div>
+                            <td class="second-td">balogun200@gmail.com</td>
                             <td>Staff</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div><div class="status-div suspended">Suspended</div></div></td>
@@ -521,8 +522,8 @@
                     </thead>
                     <tbody>
                         <tr class="tb-row">
-                            <td class="name" title="Click to view user" onclick="_getFormWithId();"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Johnson Agida"/></div> Johnson Agida</td></div>
-                            <td class="email">sjohnson120@gmail.com</td>
+                            <td class="first-td" title="Click to view user" onclick="_getFormWithId('user-details-form');"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Johnson Agida"/></div> Johnson Agida</td></div>
+                            <td class="second-td">johnson120@gmail.com</td>
                             <td>Domain</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
@@ -536,8 +537,8 @@
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to view user"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Clement Smith"/></div> Clement Smith</td></div>
-                            <td class="email">clement@gmail.com</td>
+                            <td class="first-td" title="Click to view user"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Clement Smith"/></div> Clement Smith</td></div>
+                            <td class="second-td">clement@gmail.com</td>
                             <td>Hosting</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div><div class="status-div active">Active</div></div></td>
@@ -551,8 +552,8 @@
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to view profile"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Paul Emmanuel"/></div> Yakubu Ezekiel</td></div>
-                            <td class="email">yakubu200@gmail.com</td>
+                            <td class="first-td" title="Click to view profile"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Paul Emmanuel"/></div> Yakubu Ezekiel</td></div>
+                            <td class="second-td">yakubu200@gmail.com</td>
                             <td>Hosting</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div><div class="status-div active">Active</div></div></td>
@@ -566,8 +567,8 @@
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to view profile"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Balogun Samuel"/></div> Balogun Samuel</td></div>
-                            <td class="email">balogun200@gmail.com</td>
+                            <td class="first-td" title="Click to view profile"><div class="image-div"><img src="<?php echo $website_url?>/all-images/images/avatar.jpg" alt="Balogun Samuel"/></div> Balogun Samuel</td></div>
+                            <td class="second-td">balogun200@gmail.com</td>
                             <td>Domain</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div><div class="status-div suspended">Suspended</div></div></td>
@@ -740,24 +741,24 @@
                     </thead>
                     <tbody>
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Role" onclick="_getFormWithId();"> ROLE0001</td></div>
-                            <td class="email">Super Admin</td>
+                            <td class="first-td" title="Click to View Role" onclick="_getFormWithId();"> ROLE0001</td></div>
+                            <td class="second-td">Super Admin</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
                             <td><i class="bi-three-dots-vertical"></i></td>
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Role" onclick="_getFormWithId();"> ROLE0002</td></div>
-                            <td class="email">Admin</td>
+                            <td class="first-td" title="Click to View Role" onclick="_getFormWithId();"> ROLE0002</td></div>
+                            <td class="second-td">Admin</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
                             <td><i class="bi-three-dots-vertical"></i></td>
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Role" onclick="_getFormWithId();"> ROLE0003</td></div>
-                            <td class="email">Staff</td>
+                            <td class="first-td" title="Click to View Role" onclick="_getFormWithId();"> ROLE0003</td></div>
+                            <td class="second-td">Staff</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
                             <td><i class="bi-three-dots-vertical"></i></td>
@@ -793,24 +794,24 @@
                     </thead>
                     <tbody>
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Category" onclick="_getFormWithId();"> BLOG001</td></div>
-                            <td class="email">Announcement</td>
+                            <td class="first-td" title="Click to View Category" onclick="_getFormWithId();"> BLOG001</td></div>
+                            <td class="second-td">Announcement</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
                             <td><i class="bi-three-dots-vertical"></i></td>
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Category" onclick="_getFormWithId();"> BLOG002</td></div>
-                            <td class="email">General</td>
+                            <td class="first-td" title="Click to View Category" onclick="_getFormWithId();"> BLOG002</td></div>
+                            <td class="second-td">General</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
                             <td><i class="bi-three-dots-vertical"></i></td>
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Category" onclick="_getFormWithId();"> BLOG003</td></div>
-                            <td class="email">Hosting</td>
+                            <td class="first-td" title="Click to View Category" onclick="_getFormWithId();"> BLOG003</td></div>
+                            <td class="second">Hosting</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
                             <td><i class="bi-three-dots-vertical"></i></td>
@@ -846,24 +847,24 @@
                     </thead>
                     <tbody>
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Category" onclick="_getFormWithId();"> FAQ001</td></div>
-                            <td class="email">Announcement</td>
+                            <td class="first-td" title="Click to View Category" onclick="_getFormWithId();"> FAQ001</td></div>
+                            <td class="second-td">Announcement</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
                             <td><i class="bi-three-dots-vertical"></i></td>
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Category" onclick="_getFormWithId();"> FAQ002</td></div>
-                            <td class="email">General</td>
+                            <td class="first-td" title="Click to View Category" onclick="_getFormWithId();"> FAQ002</td></div>
+                            <td class="second-td">General</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
                             <td><i class="bi-three-dots-vertical"></i></td>
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Category" onclick="_getFormWithId();"> FAQ003</td></div>
-                            <td class="email">Hosting</td>
+                            <td class="first-td" title="Click to View Category" onclick="_getFormWithId();"> FAQ003</td></div>
+                            <td class="second-td">Hosting</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
                             <td><i class="bi-three-dots-vertical"></i></td>
@@ -900,8 +901,8 @@
                     </thead>
                     <tbody>
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Category" onclick="_getFormWithId();"> STAFF</td></div>
-                            <td class="email">STAFF ID COUNT</td>
+                            <td class="first-td" title="Click to View Category" onclick="_getFormWithId();"> STAFF</td></div>
+                            <td class="second-td">STAFF ID COUNT</td>
                             <td>20</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
@@ -909,8 +910,8 @@
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Category" onclick="_getFormWithId();"> USER</td></div>
-                            <td class="email">USER ID COUNT</td>
+                            <td class="first-td" title="Click to View Category" onclick="_getFormWithId();"> USER</td></div>
+                            <td class="second-td">USER ID COUNT</td>
                             <td>10</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
@@ -918,8 +919,8 @@
                         </tr>
 
                         <tr class="tb-row">
-                            <td class="name" title="Click to View Category" onclick="_getFormWithId();"> BLOG</td></div>
-                            <td class="email">BLOG ID COUNT</td>
+                            <td class="first-td" title="Click to View Category" onclick="_getFormWithId();"> BLOG</td></div>
+                            <td class="second-td">BLOG ID COUNT</td>
                             <td>30</td>
                             <td>2024-11-18 03:28:41</td>
                             <td><div class="status-div active">Active</div></td>
