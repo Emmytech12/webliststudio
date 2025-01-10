@@ -933,7 +933,7 @@
                 </div>
 
                 
-                <script src="<?php echo $website_url?>/account/js/TextEditor.js" referrerpolicy="origin"></script>
+                <script src="<?php echo $website_url?>/admin/js/TextEditor.js" referrerpolicy="origin"></script>
                 <script>tinymce.init({selector:'#faq_answer',  // change this value according to your HTML
                 plugins: "link, image, table"
                 });</script>
@@ -1172,7 +1172,7 @@
                     <div class="page-form-div">
                         <div class="page-title">FULL PAGE CONTENT</div>
                         <div class="form-div content-form">
-                            <script src="<?php echo $website_url?>/account/js/TextEditor.js" referrerpolicy="origin"></script>
+                            <script src="<?php echo $website_url?>/admin/js/TextEditor.js" referrerpolicy="origin"></script>
                             <script>tinymce.init({selector:'#page_content_text',  // change this value according to your HTML
                                 plugins: "link, image, table"
                                 });</script>
@@ -1317,21 +1317,10 @@
                             </div>
 
                             <div class="wallet-back-div">
-                                <div class="title"><i class="bi-credit-card"></i> Total Wallet Balance</div>
                                 <div class="wallet-div">
-                                    <div class="each-wallet-div no-border">
-                                        <div class="amount" id="wallet_balance">$500,000.00</div>
-                                        <div class="txt">Total Amount Recieved</div>
-                                    </div>
-                                
                                     <div class="each-wallet-div">
+                                        <div class="txt"><i class="bi-credit-card"></i> Available Wallet Balacne</div>
                                         <div class="amount" id="wallet_balance">$250,000.00</div>
-                                        <div class="txt">Total Amount spent</div>
-                                    </div>
-
-                                    <div class="each-wallet-div">
-                                        <div class="amount" id="wallet_balance">$250,000.00</div>
-                                        <div class="txt">Available Balacne</div>
                                     </div>
                                 </div>
                             </div>
@@ -1345,7 +1334,8 @@
                     <ul>
                         <li class="active" title="User Profile" id="user_profile_details" onclick="_getUserPageContents('user_profile_details','user_profile_details','<?php echo $ids?>')"><i class="bi-person-bounding-box"></i> User Profile</li>
                         <li title="Transaction History" id="transaction_history" onclick="_getUserPageContents('transaction_history','transaction_history','<?php echo $ids?>')"><i class="bi-credit-card"></i> Transaction History</li>
-                        <li title="Wallet History" id="wallet_history" onclick="_getUserPageContents('wallet_history','wallet_history','<?php echo $ids?>')"><i class="bi-wallet"></i> Wallet History</li>
+                        <li title="Domain History" id="domain_history" onclick="_getUserPageContents('domain_history','domain_history','<?php echo $ids?>')"><i class="bi-globe2"></i> Domain History</li>
+                        <li title="Hosting History" id="hosting_history" onclick="_getUserPageContents('hosting_history','hosting_history','<?php echo $ids?>')"><i class="bi-hdd-rack"></i> Hosting History</li>
                     </ul>
                 </div>
             </div>

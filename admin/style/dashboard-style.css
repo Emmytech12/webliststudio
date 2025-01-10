@@ -1031,6 +1031,20 @@ header .header-div-in .header-nav-div .toggle-profile-div .toggle-div-in .header
 	color: var(--secondary-color);
 }
 
+
+.table-div .table .tb-row .icon-div{
+	float: left;
+	width: 20px;
+	margin: auto 5px;
+	font-size: 15px;
+	color: var(--secondary-color);
+}
+
+.table-div .table .tb-row .active-icon{
+	color:rgba(9, 172, 77, 0.9);
+}
+
+
 .table-div .table td i{
 	cursor: pointer;
 }
@@ -1057,6 +1071,10 @@ header .header-div-in .header-nav-div .toggle-profile-div .toggle-div-in .header
 	color:rgba(218, 90, 31, 0.87);
 }
 
+.table-div .table .expired{
+	background:rgb(252, 164, 57,.1);
+	color:rgba(218, 90, 31, 0.87);
+}
 
 
 
@@ -2528,20 +2546,6 @@ header .header-div-in .header-nav-div .toggle-profile-div .toggle-div-in .header
 	gap: 10px;
 }
 
-.user-profile-div .profile-content-div .bg-img .mini-profile .text-back-div .inner-text .wallet-back-div .title{
-	display: flex;
-	align-items: center;
-	gap: 4px;
-	font-family: sub-title-font;
-	font-weight: bold;
-	font-size: 14px;
-	color: var(--sub-body-color);
-}
-
-.user-profile-div .profile-content-div .bg-img .mini-profile .text-back-div .inner-text .wallet-back-div .title i{
-	color: var(--secondary-color);
-}
-
 .user-profile-div .profile-content-div .bg-img .mini-profile .text-back-div .inner-text .wallet-back-div .wallet-div{
 	display: flex;
 	align-content: center;
@@ -2552,8 +2556,6 @@ header .header-div-in .header-nav-div .toggle-profile-div .toggle-div-in .header
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
-	border-left: #e4e2e2 1px dashed;
-	padding-left: 15px;
 }
 
 .user-profile-div .profile-content-div .bg-img .mini-profile .text-back-div .inner-text .wallet-back-div .wallet-div .no-border{
@@ -2562,14 +2564,14 @@ header .header-div-in .header-nav-div .toggle-profile-div .toggle-div-in .header
 
 .user-profile-div .profile-content-div .bg-img .mini-profile .text-back-div .inner-text .wallet-back-div .wallet-div .each-wallet-div .amount{
 	font-family: sub-title-font;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: bold;
 	color: var(--sub-body-color);
 }
 
 .user-profile-div .profile-content-div .bg-img .mini-profile .text-back-div .inner-text .wallet-back-div .wallet-div .each-wallet-div .txt{
 	font-family: body-font;
-	font-size: 12px;
+	font-size: 13px;
 	color: var(--secondary-color);
 }
 

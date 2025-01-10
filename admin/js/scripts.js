@@ -277,7 +277,7 @@ function _checkPageContent(menu_id, page, publish_id) {
 
 
 function _getUserActiveLink(menu_id){
-	$('#user_profile_details, #transaction_history, #wallet_history').removeClass('active');
+	$('#user_profile_details, #transaction_history, #domain_history, #hosting_history').removeClass('active');
 	$('#' + menu_id).addClass('active');
 }
 

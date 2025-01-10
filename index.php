@@ -1,26 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http: //www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<?php include 'config/constants.php';?>
-<?php include 'config/functions.php';?>
+<?php include 'config/constants.php'; ?>
+<?php include 'config/functions.php'; ?>
+
 <head>
-    <?php include 'meta.php'?>
-    <title><?php echo $thename?> | Custom Website Development and SEO Services in USA</title>
-    <meta name="keywords" content="<?php echo $thename?>, web studeio, Custom website builder, Custom website developer, Website Development company in USA, Website Development consultant in USA, Website listing, Digital marketing company in USA, Web Design, Website SEO booting company, Website builder in USA, Website consulting services in USA, Custom website development company, website development experts in USA, website booster, website booster company, SEO consultant in USA, SEO Consulting company in USA" />
+    <?php include 'meta.php' ?>
+    <title><?php echo $thename ?> | Custom Website Development and SEO Services in USA</title>
+    <meta name="keywords" content="<?php echo $thename ?>, web studeio, Custom website builder, Custom website developer, Website Development company in USA, Website Development consultant in USA, Website listing, Digital marketing company in USA, Web Design, Website SEO booting company, Website builder in USA, Website consulting services in USA, Custom website development company, website development experts in USA, website booster, website booster company, SEO consultant in USA, SEO Consulting company in USA" />
     <meta name="description" content="Boost Your Online Presence with Our Custom Website Development and SEO Services ensure your website ranks higher on search engines and attracts more traffic." />
 
-    <meta property="og:title" content="<?php echo $thename?> |  Custom Website Development and SEO Services in USA" />
-    <meta property="og:image" content="<?php echo $website_url?>/all-images/plugin-pix/webliststudio.jpg" />
+    <meta property="og:title" content="<?php echo $thename ?> |  Custom Website Development and SEO Services in USA" />
+    <meta property="og:image" content="<?php echo $website_url ?>/all-images/plugin-pix/webliststudio.jpg" />
     <meta property="og:description" content="Boost Your Online Presence with Our Custom Website Development and SEO Services ensure your website ranks higher on search engines and attracts more traffic." />
 
-    <meta name="twitter:title" content="<?php echo $thename?> |  Custom Website Development and SEO Services in USA" />
-    <meta name="twitter:card" content="<?php echo $thename?>" />
-    <meta name="twitter:image" content="<?php echo $website_url?>/all-images/plugin-pix/webliststudio.jpg" />
-    <meta name="twitter:description"  content="Boost Your Online Presence with Our Custom Website Development and SEO Services ensure your website ranks higher on search engines and attracts more traffic." />
+    <meta name="twitter:title" content="<?php echo $thename ?> |  Custom Website Development and SEO Services in USA" />
+    <meta name="twitter:card" content="<?php echo $thename ?>" />
+    <meta name="twitter:image" content="<?php echo $website_url ?>/all-images/plugin-pix/webliststudio.jpg" />
+    <meta name="twitter:description" content="Boost Your Online Presence with Our Custom Website Development and SEO Services ensure your website ranks higher on search engines and attracts more traffic." />
 </head>
 
 <body>
 
-    <?php  include 'header.php'?>
+    <?php include 'header.php' ?>
 
     <section class="slide-section">
         <div class="slide-div">
@@ -28,14 +29,14 @@
                 <div class="text-content-div animated fadeIn">
                     <div>
                         <div class="top-title"><i class="bi-bell-fill"></i><span> <strong>30% Discount</strong> first
-                        annual purchase</span></div>
+                                annual purchase</span></div>
                     </div>
                     <h1>Unlimited Domain & Hosting in One Platform</h1>
                     <p>A ton of website hosting options, 99.9% uptime guarantee, free SSL certificate, easy WordPress
                         installs.</p>
 
                     <div class="btn-div">
-                        <a href="<?php echo $website_url?>" title="Start as a student">
+                        <a href="<?php echo $website_url ?>" title="Start as a student">
                             <button class="btn" title="Get Started">Get Started <i
                                     class="bi-chevron-right"></i></button></a>
                         <a href="#" title="Get Started">
@@ -44,8 +45,8 @@
                     </div>
                 </div>
                 <div class="image-content-div animated fadeIn">
-                    <img src="<?php echo $website_url?>/all-images/body-pix/slide-img1.png"
-                        alt="<?php echo $thename?>" />
+                    <img src="<?php echo $website_url ?>/all-images/body-pix/slide-img1.png"
+                        alt="<?php echo $thename ?>" />
                 </div>
             </div>
         </div>
@@ -62,47 +63,47 @@
                     </div>
 
                     <div class="domain-tag-back-div">
-                        <a href="<?php echo $website_url?>/#">
+                        <a href="<?php echo $website_url ?>/#">
                             <div class="domain-tag" onclick="_back_to_top();">
                                 <h4><span>.</span>com</h4>
                                 <span>$8.99</span>
                             </div>
                         </a>
 
-                        <a href="<?php echo $website_url?>/#">
+                        <a href="<?php echo $website_url ?>/#">
                             <div class="domain-tag" onclick="_back_to_top();">
                                 <h4><span>.</span>online</h4>
                                 <span>$8.99</span>
                             </div>
                         </a>
 
-                        <a href="<?php echo $website_url?>/#">
+                        <a href="<?php echo $website_url ?>/#">
                             <div class="domain-tag" onclick="_back_to_top();">
                                 <h4><span>.</span>net</h4>
                                 <span>$4.99</span>
                             </div>
                         </a>
 
-                        <a href="<?php echo $website_url?>/#">
+                        <a href="<?php echo $website_url ?>/#">
                             <div class="domain-tag" onclick="_back_to_top();">
                                 <h4><span>.</span>org</h4>
                                 <span>$2.99</span>
                             </div>
                         </a>
 
-                        <a href="<?php echo $website_url?>/#">
+                        <a href="<?php echo $website_url ?>/#">
                             <div class="domain-tag" onclick="_back_to_top();">
                                 <h4><span>.</span>store</h4>
                                 <span>$0.99</span>
                             </div>
                         </a>
-                        <a href="<?php echo $website_url?>/#">
+                        <a href="<?php echo $website_url ?>/#">
                             <div class="domain-tag" onclick="_back_to_top();">
                                 <h4><span>.</span>app</h4>
                                 <span>$0.99</span>
                             </div>
                         </a>
-                        <a href="<?php echo $website_url?>/#">
+                        <a href="<?php echo $website_url ?>/#">
                             <div class="domain-tag" onclick="_back_to_top();">
                                 <h4><span>.</span>xyz</h4>
                                 <span>$0.99</span>
@@ -124,7 +125,7 @@
                                 onclick="_selectOption('searchDomainExt')" style="opacity: 1;">
                                 <option selected="selected" value=".com">.com</option>
                             </select>
-                            
+
                             <div class="placeholder">Extension</div>
                             <div class="searchPanel animated fadeIn" id="searchPanel_searchDomainExt"
                                 style="display: none;">
@@ -142,7 +143,7 @@
                             </div>
                         </div>
                     </div>
-                        <button class="btn" title="Search Domain"><i class="bi-search"></i> Search </button>
+                    <button class="btn" title="Search Domain"><i class="bi-search"></i> Search </button>
                 </div>
             </div>
 
@@ -221,7 +222,7 @@
                                     <li class="slash"><span>loud Hosting & Domain</span> <span class="no-strike"><i
                                                 class="bi-x"></i></span></li>
                                 </ul>
-                                <a href="<?php echo $website_url?>">
+                                <a href="<?php echo $website_url ?>">
                                     <button class="btn" title="Get Started Now">Get Started Now</button></a>
                             </div>
                         </div>
@@ -240,7 +241,7 @@
                                     <li class="slash"><span>loud Hosting & Domain</span> <span class="no-strike"><i
                                                 class="bi-x"></i></span></li>
                                 </ul>
-                                <a href="<?php echo $website_url?>">
+                                <a href="<?php echo $website_url ?>">
                                     <button class="btn" title="Get Started Now">Get Started Now</button></a>
                             </div>
                         </div>
@@ -257,7 +258,7 @@
                                     <li>Lifetime Support</li>
                                     <li>Cloud Hosting & Domain</li>
                                 </ul>
-                                <a href="<?php echo $website_url?>">
+                                <a href="<?php echo $website_url ?>">
                                     <button class="btn" title="Get Started Now">Get Started Now</button></a>
                             </div>
                         </div>
@@ -279,7 +280,7 @@
                                     <li class="slash"><span>loud Hosting & Domain</span> <span class="no-strike"><i
                                                 class="bi-x"></i></span></li>
                                 </ul>
-                                <a href="<?php echo $website_url?>">
+                                <a href="<?php echo $website_url ?>">
                                     <button class="btn" title="Get Started Now">Get Started Now</button></a>
                             </div>
                         </div>
@@ -298,7 +299,7 @@
                                     <li class="slash"><span>loud Hosting & Domain</span> <span class="no-strike"><i
                                                 class="bi-x"></i></span></li>
                                 </ul>
-                                <a href="<?php echo $website_url?>">
+                                <a href="<?php echo $website_url ?>">
                                     <button class="btn" title="Get Started Now">Get Started Now</button></a>
                             </div>
                         </div>
@@ -315,7 +316,7 @@
                                     <li>Lifetime Support</li>
                                     <li>Cloud Hosting & Domain</li>
                                 </ul>
-                                <a href="<?php echo $website_url?>">
+                                <a href="<?php echo $website_url ?>">
                                     <button class="btn" title="Get Started Now">Get Started Now</button></a>
                             </div>
                         </div>
@@ -323,11 +324,11 @@
                 </div>
             </div>
             <script>
-            _planToggle();
+                _planToggle();
             </script>
         </section>
 
-        <?php $callclass->_weblist_company($website_url);?>
+        <?php $callclass->_weblist_company($website_url); ?>
 
         <section class="body-div net-bg-br">
             <div class="body-div-in">
@@ -341,12 +342,12 @@
                     <div class="service-back-div">
                         <div class="service-div" data-aos="fade-in" data-aos-duration="1000">
                             <div class="image-div">
-                                <img src="<?php echo $website_url?>/all-images/body-pix/web-development.webp"
+                                <img src="<?php echo $website_url ?>/all-images/body-pix/web-development.webp"
                                     alt="Custom Website Development" />
                             </div>
 
                             <div class="icon-div">
-                                <img src="<?php echo $website_url?>/all-images/images/icon.png" alt="First Cuture Logo"/>
+                                <img src="<?php echo $website_url ?>/all-images/images/icon.png" alt="First Cuture Logo" />
                             </div>
 
                             <div class="service-text-div">
@@ -361,12 +362,12 @@
 
                         <div class="service-div" data-aos="fade-in" data-aos-duration="800">
                             <div class="image-div">
-                                <img src="<?php echo $website_url?>/all-images/body-pix/seo.jpg"
+                                <img src="<?php echo $website_url ?>/all-images/body-pix/seo.jpg"
                                     alt="Website SEO and Management" />
                             </div>
 
                             <div class="icon-div">
-                                <img src="<?php echo $website_url?>/all-images/images/icon.png" alt="First Cuture Logo"/>
+                                <img src="<?php echo $website_url ?>/all-images/images/icon.png" alt="First Cuture Logo" />
                             </div>
 
                             <div class="service-text-div">
@@ -381,12 +382,12 @@
 
                         <div class="service-div" data-aos="fade-in" data-aos-duration="900">
                             <div class="image-div">
-                                <img src="<?php echo $website_url?>/all-images/body-pix/web-hosting.jpg"
+                                <img src="<?php echo $website_url ?>/all-images/body-pix/web-hosting.jpg"
                                     alt="Web Hosting and Server Management" />
                             </div>
 
                             <div class="icon-div">
-                                <img src="<?php echo $website_url?>/all-images/images/icon.png" alt="First Cuture Logo"/>
+                                <img src="<?php echo $website_url ?>/all-images/images/icon.png" alt="First Cuture Logo" />
                             </div>
 
                             <div class="service-text-div">
@@ -401,12 +402,12 @@
 
                         <div class="service-div" data-aos="fade-in" data-aos-duration="1200">
                             <div class="image-div">
-                                <img src="<?php echo $website_url?>/all-images/body-pix/cms.jpeg"
+                                <img src="<?php echo $website_url ?>/all-images/body-pix/cms.jpeg"
                                     alt="CMS Development And Management" />
                             </div>
 
                             <div class="icon-div">
-                                <img src="<?php echo $website_url?>/all-images/images/icon.png" alt="First Cuture Logo"/>
+                                <img src="<?php echo $website_url ?>/all-images/images/icon.png" alt="First Cuture Logo" />
                             </div>
 
                             <div class="service-text-div">
@@ -421,12 +422,12 @@
 
                         <div class="service-div" data-aos="fade-in" data-aos-duration="900">
                             <div class="image-div">
-                                <img src="<?php echo $website_url?>/all-images/body-pix/digital-marketing.webp"
+                                <img src="<?php echo $website_url ?>/all-images/body-pix/digital-marketing.webp"
                                     alt="Digital Marketing and Media Brands" />
                             </div>
 
                             <div class="icon-div">
-                                <img src="<?php echo $website_url?>/all-images/images/icon.png" alt="First Cuture Logo"/>
+                                <img src="<?php echo $website_url ?>/all-images/images/icon.png" alt="First Cuture Logo" />
                             </div>
 
                             <div class="service-text-div">
@@ -441,12 +442,12 @@
 
                         <div class="service-div" data-aos="fade-in" data-aos-duration="900">
                             <div class="image-div">
-                                <img src="<?php echo $website_url?>/all-images/body-pix/payment-platform.jpg"
+                                <img src="<?php echo $website_url ?>/all-images/body-pix/payment-platform.jpg"
                                     alt="Payment Platform Integration" />
                             </div>
 
                             <div class="icon-div">
-                                <img src="<?php echo $website_url?>/all-images/images/icon.png" alt="First Cuture Logo"/>
+                                <img src="<?php echo $website_url ?>/all-images/images/icon.png" alt="First Cuture Logo" />
                             </div>
 
                             <div class="service-text-div">
@@ -468,7 +469,7 @@
                 <div class="about-back-div">
                     <div class="about-div">
                         <div class="image-div" data-aos="fade-in" data-aos-duration="1200">
-                            <img src="<?php echo $website_url?>/all-images/body-pix/about.svg" alt="About Us" />
+                            <img src="<?php echo $website_url ?>/all-images/body-pix/about.svg" alt="About Us" />
                         </div>
                         <div class="about-content-div" data-aos="fade-up" data-aos-duration="1000">
                             <div><span class="top-title">ABOUT US</span></div>
@@ -501,7 +502,7 @@
 
                             </div>
                             <div>
-                                <a href="<?php echo $website_url?>/about" title="Learn More">
+                                <a href="<?php echo $website_url ?>/about" title="Learn More">
                                     <button class="btn" title="Learn More">Learn More <i
                                             class="bi-arrow-right"></i></button></a>
                             </div>
@@ -558,14 +559,14 @@
                         </div>
 
                         <div class="image-div" data-aos="fade-in" data-aos-duration="1200">
-                            <img src="<?php echo $website_url?>/all-images/body-pix/status-image.svg"
+                            <img src="<?php echo $website_url ?>/all-images/body-pix/status-image.svg"
                                 alt="Our Core Values" />
                         </div>
                     </div>
                 </div>
             </div>
             <script>
-            _progressBar();
+                _progressBar();
             </script>
         </section>
 
@@ -574,7 +575,7 @@
                 <div class="main-pages-back-div">
                     <div class="faq-back-div">
                         <div class="faq-div">
-                        
+
                             <div class="right-container" data-aos="fade-up" data-aos-duration="1200">
                                 <div class="faq-title">
                                     <div><span class="top-title">FAQ</span></div>
@@ -628,13 +629,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="<?php echo $website_url?>/faq" title="Read More FAQ">
+                                <a href="<?php echo $website_url ?>/faq" title="Read More FAQ">
                                     <button class="btn" title="Read More FAQ">Read More FAQ <i
                                             class="bi-arrow-right"></i></button></a>
                             </div>
 
                             <div class="left-image-div" data-aos="fade-in" data-aos-duration="1200">
-                                <img src="<?php echo $website_url?>/all-images/body-pix/faq.svg"
+                                <img src="<?php echo $website_url ?>/all-images/body-pix/faq.svg"
                                     alt="Frequently Asked Question" />
                             </div>
                         </div>
@@ -671,7 +672,7 @@
                                             <div class="main-testimonial">
                                                 <div class="img-back-div">
                                                     <div class="img-div">
-                                                        <img src="<?php echo $website_url?>/all-images/images/avatar.png"
+                                                        <img src="<?php echo $website_url ?>/all-images/images/avatar.png"
                                                             alt="testimonial" />
                                                     </div>
 
@@ -702,7 +703,7 @@
                                             <div class="main-testimonial">
                                                 <div class="img-back-div">
                                                     <div class="img-div">
-                                                        <img src="<?php echo $website_url?>/all-images/images/avatar.png"
+                                                        <img src="<?php echo $website_url ?>/all-images/images/avatar.png"
                                                             alt="testimonial" />
                                                     </div>
 
@@ -735,7 +736,7 @@
                                             <div class="main-testimonial">
                                                 <div class="img-back-div">
                                                     <div class="img-div">
-                                                        <img src="<?php echo $website_url?>/all-images/images/avatar.png"
+                                                        <img src="<?php echo $website_url ?>/all-images/images/avatar.png"
                                                             alt="testimonial" />
                                                     </div>
 
@@ -766,7 +767,7 @@
                                             <div class="main-testimonial">
                                                 <div class="img-back-div">
                                                     <div class="img-div">
-                                                        <img src="<?php echo $website_url?>/all-images/images/avatar.png"
+                                                        <img src="<?php echo $website_url ?>/all-images/images/avatar.png"
                                                             alt="testimonial" />
                                                     </div>
 
@@ -800,28 +801,28 @@
                 </div>
             </div>
             <script>
-            window['carousel_options_3'] = ({
-                items: 4,
-                margin: 30,
-                loop: true,
-                dots: true,
-                autoplayHoverPause: true,
-                smartSpeed: 650,
-                autoplay: true,
-                breakpoints: {
-                    700: {
-                        slidesPerView: 1,
-                    },
-                    1100: {
-                        slidesPerView: 1,
-                    },
-                    1300: {
-                        slidesPerView: 2,
-                    }
+                window['carousel_options_3'] = ({
+                    items: 4,
+                    margin: 30,
+                    loop: true,
+                    dots: true,
+                    autoplayHoverPause: true,
+                    smartSpeed: 650,
+                    autoplay: true,
+                    breakpoints: {
+                        700: {
+                            slidesPerView: 1,
+                        },
+                        1100: {
+                            slidesPerView: 1,
+                        },
+                        1300: {
+                            slidesPerView: 2,
+                        }
 
-                }
-            });
-            _call_carousel(3);
+                    }
+                });
+                _call_carousel(3);
             </script>
         </section>
 
@@ -848,7 +849,7 @@
                         <div class="blog-div" data-aos="fade-in" data-aos-duration="1000">
                             <div class="blog-inner-div">
                                 <div class="image-div">
-                                    <img src="<?php echo $website_url?>/all-images/blog/blog_1.jpg" alt="Blog" />
+                                    <img src="<?php echo $website_url ?>/all-images/blog/blog_1.jpg" alt="Blog" />
                                 </div>
 
                                 <div class="text-div">
@@ -856,7 +857,7 @@
                                             class="bi-eye-fill"></i> 250 VIEWS</div>
                                     <h3>Maximizing Business Efficiency Through Custom Software Development</h3>
 
-                                    <a href="<?php echo $website_url?>/blog/maximizing-business-efficiency-through-custom-software-development" title="Maximizing Business Efficiency Through Custom Software Development">
+                                    <a href="<?php echo $website_url ?>/blog/maximizing-business-efficiency-through-custom-software-development" title="Maximizing Business Efficiency Through Custom Software Development">
                                         <button class="btn" title="Read More">Read More <i
                                                 class="bi-arrow-right"></i></button></a>
                                 </div>
@@ -866,7 +867,7 @@
                         <div class="blog-div" data-aos="fade-in" data-aos-duration="1000">
                             <div class="blog-inner-div">
                                 <div class="image-div">
-                                    <img src="<?php echo $website_url?>/all-images/blog/blog_2.png" alt="Blog" />
+                                    <img src="<?php echo $website_url ?>/all-images/blog/blog_2.png" alt="Blog" />
                                 </div>
 
                                 <div class="text-div">
@@ -875,7 +876,7 @@
                                     <h3>Enhancing Digital Transformation with Scalable Cloud Solutions for Modern
                                         Enterprises</h3>
 
-                                    <a href="<?php echo $website_url?>" title="Read More">
+                                    <a href="<?php echo $website_url ?>" title="Read More">
                                         <button class="btn" title="Read More">Read More <i
                                                 class="bi-arrow-right"></i></button></a>
                                 </div>
@@ -885,7 +886,7 @@
                         <div class="blog-div" data-aos="fade-in" data-aos-duration="1000">
                             <div class="blog-inner-div">
                                 <div class="image-div">
-                                    <img src="<?php echo $website_url?>/all-images/blog/blog_3.jpeg" alt="Blog" />
+                                    <img src="<?php echo $website_url ?>/all-images/blog/blog_3.jpeg" alt="Blog" />
                                 </div>
 
                                 <div class="text-div">
@@ -894,7 +895,7 @@
                                     <h3>Leveraging Cutting-Edge Cybersecurity Strategies to Protect Your Business in a
                                         Digital World</h3>
 
-                                    <a href="<?php echo $website_url?>" title="Read More">
+                                    <a href="<?php echo $website_url ?>" title="Read More">
                                         <button class="btn" title="Read More">Read More <i
                                                 class="bi-arrow-right"></i></button></a>
                                 </div>
@@ -905,9 +906,9 @@
             </div>
         </section>
 
-        <?php $callclass->_weblist_partners($website_url);?>
+        <?php $callclass->_weblist_partners($website_url); ?>
         <br clear="all" />
-        <?php  include 'footer.php'?>
+        <?php include 'footer.php' ?>
     </section>
 
 </body>

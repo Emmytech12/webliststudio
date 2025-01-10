@@ -1,39 +1,3 @@
-
-$(window).scroll(function () {
-	var scrollheight = $(window).scrollTop();
-	if (scrollheight >= 100) {
-	  $("#back2Top").fadeIn(1000);
-	} else {
-	  $("#back2Top").fadeOut(1000);
-	 
-	}
-  });
-
-function _back_to_top(){
-		event.preventDefault();
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
-}
-
-function _open_menu(){
-	   $('.sidenavdiv, .sidenavdiv-in').animate({'margin-left':'0'},200);
-	   $('.live-chat-back-div').animate({'margin-left':'-100%'},400);
-	   $('.index-menu-back-div').animate({'margin-left':'0'},400);
-}
-function _open_live_chat(){
-	   $('.sidenavdiv, .sidenavdiv-in').animate({'margin-left':'0'},200);
-	   $('.index-menu-back-div').animate({'margin-left':'-100%'},400);
-	   $('.live-chat-back-div').animate({'margin-left':'0'},400);
-}
-function _close_side_nav(){
-	   $('.sidenavdiv, .sidenavdiv-in').animate({'margin-left':'-100%'},200);
-	   $('.index-menu-back-div,.live-chat-back-div').animate({'margin-left':'-100%'},400);
-}
-
-function _open_li(ids){
-		 $('#'+ids+'-sub-li').toggle('slow');
-}
-
 function alert_close(){
 	$('#get-more-div').html('').fadeOut(200);
 }
@@ -82,9 +46,15 @@ function _next_page(next_id) {
     $("#" + next_id).fadeIn(1000);
 }
 
-
 function _toggle_profile_pix_div() {
 	$(".toggle-profile-div").toggle("slow");
+}
+
+function _tableToggle() {
+	$('.switch input').on('change', function () {
+		const label = $(this).next().next();
+		label.text($(this).is(':checked') ? 'ON' : 'OFF');
+	});
 }
 
 function select_search() {
@@ -110,103 +80,47 @@ function isNumber_Check(e) {
 }
 
 
-
-function updatePercentage(container, targetValue) {
-    const circleElement = container.querySelector('.circle');
-    const percentageElement = container.querySelector('.percentage');
-
-    percentageElement.textContent = `${targetValue}%`;
-
-    circleElement.classList.remove('red', 'orange', 'yellow', 'blue', 'green');
-
-    if (targetValue < 1 || (targetValue >= 1 && targetValue <= 15)) {
-        circleElement.classList.add('red');
-    } else if (targetValue > 15 && targetValue <= 30) {
-        circleElement.classList.add('orange');
-    } else if (targetValue > 30 && targetValue <= 50) {
-        circleElement.classList.add('yellow');
-    } else if (targetValue > 50 && targetValue <= 80) {
-        circleElement.classList.add('blue');
-    } else if (targetValue > 80) {
-        circleElement.classList.add('green');
+function _expandSideLink(ids) {
+    if (!$('#' + ids + '-li').is(':visible')) {
+        $('.dashboard-in').not('#' + ids + '-li').slideUp('slow');
+        $('#' + ids + '-li').slideDown('slow');
     }
 }
 
+function _closeAllSideLinks() {
+    $('.dashboard-in').hide('slow');
+}
 
+function _removeClass(page){
+	if (page!=='dashboard'){
+		$('#dashboard').removeClass('active-li');
+	}else{
+		$('#dashboard').addClass('active-li');
+	}
+}
+
+function _getActivePage(page, menu_id){
+	_removeClass(page);
+	$('#shared_hosting, #new_domains, #transfer_domain, #domains, #user_profile').removeClass('active');
+	$('#' + menu_id).addClass('active');
+}
+
+function _getPage(page, menu_id) {	
+	_getActivePage(page, menu_id);
 	
-function _nextPage(next_id, icon, divid) {
-	$("#account_settings_id,#account_detail,#change_password").hide();
-	$("#" + next_id).fadeIn(1000);
-	$("#panel-title").html($("#" + icon).html() + $("#" + divid).html());
-}
-  
-function _prevPage(next_id) {
-	$("#account_settings_id,#account_detail,#change_password").hide();
-	$("#" + next_id).fadeIn(1000);
-	$("#panel-title").html(
-	  '<i class="bi-gear"></i> </span id="app_text"> APP SETTINGS'
-	);
-}
-
-
-
-
-
-
-function _closeNav(){
-	$('.side-nav-bg-sub-div').animate({'left':'-100%'},400);
-    $('#side-nav-div').animate({'left':'-100px'},200);
-}
-
-function _closeAllNav(){
-	_closeNav();
-	_removeClass();
-}
-
-function _removeClass(){
-	$('#side-dashboard, #side-staff, #side-users, #side-domain, #side-hosting, #side-blog, #side-faq, #side-report').removeClass('active-li');
-}
-
-function _getNav(nav){
-	if(nav==''){
-		_closeNav();
-	}else{
-	   	$('#link-domain, #link-hosting').css({'display':'none'});
-		$('#link-'+nav).css({'display':'block'});
-	   	$('.side-nav-bg-sub-div').animate({'left':'100px'},200);
-	}
-}
-
-
-function _getActiveLink(divid, nav) {
-	_removeClass()
-
-	$('#side-'+divid).addClass('active-li');
-	$("#page-title").html($("#_" + divid).html());
-
-	_getNav(nav);
-}
-
-
-function _getPage(page, divid, nav) {
-	_getActiveLink(divid, nav);
-	if(page==''){
-		//do nothing
-	}else{
-		$("#page-content").html('<div class="ajax-loader"><img src="'+ website_url +'/all-images/images/spinner.gif"/></div>').fadeIn(500);
-		const action = "get_page";
-		const dataString = "action=" + action + "&page=" + page;
-
-		$.ajax({
-			type: "POST",
-			url: admin_login_local_url,
-			data: dataString,
-			cache: false,
-			success: function (html) {
-				$("#page-content").html(html);
-			},
-		});
-	}
+	$("#page-content").html('<div class="ajax-loader"><img src="'+ website_url +'/all-images/images/spinner.gif"/></div>').fadeIn(500);
+	const action = "get_page";
+	const dataString = "action=" + action + "&page=" + page;
+	$.ajax({
+		type: "POST",
+		url: account_local_url,
+		data: dataString,
+		cache: false,
+		success: function (html) {
+			$("#page-content").html(html);
+		},
+	});
+	
 }
 
 function _getForm(page) {
@@ -215,7 +129,7 @@ function _getForm(page) {
 		const dataString = "action=" + action + "&page=" + page;
 		$.ajax({
 		type: "POST",
-		url: admin_login_local_url,
+		url: account_local_url,
 		data: dataString,
 		cache: false,
 		success: function (html) {
@@ -224,14 +138,13 @@ function _getForm(page) {
 	});
 }
 
-
 function _getFormWithId(page, ids) {
 	$("#get-more-div").css({'display': 'flex','justify-content': 'center','align-items': 'center'}) .fadeIn(500);
 		const action = "get_form_with_id";
 		const dataString = "action=" + action + "&page=" + page + "&ids=" + ids;
 		$.ajax({
 		type: "POST",
-		url: admin_login_local_url,
+		url: account_local_url,
 		data: dataString,
 		cache: false,
 		success: function (html) {
@@ -246,7 +159,7 @@ function _editPage(page, publish_id){
 		const dataString ='action='+ action + '&page=' + page + '&publish_id=' + publish_id;
 		$.ajax({
 		type: "POST",
-		url: admin_login_local_url,
+		url: account_local_url,
 		data: dataString,
 		cache: false,
 		success: function(html){
@@ -256,23 +169,22 @@ function _editPage(page, publish_id){
 }
   
 
-function _getActiveModalLink(menu_id){
-	$('#page_content, #picture_page').removeClass('active-li');
+function _getActiveTableContent(menu_id){
+	$('#domain_table, #hosting_table').removeClass('active-li');
 	$('#' + menu_id).addClass('active-li');
 }
 
-function _checkPageContent(menu_id, page, publish_id) {
-	_getActiveModalLink(menu_id);
-	$('#get_pages_details').html('<div class="ajax-loader"><img src="'+ website_url +'/admin/a/all-images/images/spinner.gif" alt="Loading"/></div>').fadeIn("slow");
-	const action = 'get_edit_page_form';
-	const dataString = 'action=' + action + '&page=' + page + '&publish_id=' + publish_id;
+function _getTableContent(menu_id, page, ids) {
+	_getActiveTableContent(menu_id);
+	const action = 'get_table_details';
+	const dataString = 'action=' + action + '&page=' + page + '&ids=' + ids;
 	$.ajax({
 	  type: "POST",
-	  url: admin_login_local_url,
+	  url: account_local_url,
 	  data: dataString,
 	  cache: false,
 	  success: function (html) {
-		$('#get_pages_details').html(html);
+		$('#get_table_details').html(html);
 	  }
 	});
 }
@@ -284,7 +196,7 @@ function _passwordResetSuccesful(page) {
 
 	$.ajax({
 		type: "POST",
-		url: admin_login_local_url,
+		url: account_local_url,
 		data: dataString,
 		cache: false,
 		success: function (html) { 
@@ -300,13 +212,125 @@ function _getFormDetails(next_id) {
 	$('#user-details, #edit_btn').fadeOut(500);
 }
 
-function filter(selectBoxId) {
+function filters(selectBoxId) {
 	var valThis = $('#search'+selectBoxId).val();
-	$('#fetchAll'+selectBoxId+' > tbody .tb-row, .grid-div, .faq-back-div').each(function() {
+	$('#fetchAll'+selectBoxId+' > tbody .tb-row').each(function() {
 		var text = $(this).text();
 		(text.toLowerCase().indexOf(valThis.toLowerCase()) > -1) ? $(this).show(): $(this).hide();
     });
  };
 
 
+function _selectOption(selectBoxId) {
+	$('#txtSearchValue_'+selectBoxId).val('');
+	filter(selectBoxId);
+
+    if ($('#searchPanel_'+selectBoxId).is(":visible")) {
+        $('#searchPanel_'+selectBoxId).css('display', 'none');
+    } else {
+        $('#searchPanel_'+selectBoxId).css('display', 'flex');
+        $('#txtSearchValue_'+selectBoxId).focus();
+    }
+}
+document.addEventListener('click', (e) => {
+	const selectContainer = document.querySelector('#selectContainer');
+	const searchPanel = document.querySelector('.searchPanel');
+	if (!selectContainer.contains(e.target)) {
+	  searchPanel.style.display = 'none';
+	}
+});
+
+function filter(selectBoxId) {
+	var valThis = $('#txtSearchValue_'+selectBoxId).val();
+	$('#searchList_'+selectBoxId+' > li').each(function() {
+		var text = $(this).text();
+		(text.toLowerCase().indexOf(valThis.toLowerCase()) > -1) ? $(this).show(): $(this).hide();
+	});
+};
+
+function _clickOption(selectedOption, id, value) {
+	selectBoxId = selectedOption.replace("searchList_", "");
+	// Clear previous options and set the selected one
+	$('#'+selectBoxId).html(`<option selected="selected" value="${id}">${value}</option>`);
+	_selectOption(selectBoxId);
+};
+
+
+
+function _checkAll(){
+	$(document).ready(function() {
+	  $('#parent').on('change', function() {
+		  $('.child').prop('checked', this.checked);
+	  });
+	  $('.child').on('change', function() {
+		  $('#parent').prop('checked', $('.child:checked').length===$('.child').length);
+	  });
+  });
+}
+
+function _getPagination(entriesPerPage = 10) {
+    const $tableRows = $(".tb-row"), totalEntries = $tableRows.length;
+    let currentPage = 1, totalPages = Math.ceil(totalEntries / entriesPerPage);
+
+    const $currentStartEl = $("#current-start"),
+        $currentEndEl = $("#current-end"),
+        $totalEntriesEl = $("#total-entries"),
+        $prevBtn = $("#prev-btn"),
+        $nextBtn = $("#next-btn"),
+        $pageButtons = $(".pagination-page");
+
+    function updatePagination() {
+        const startIndex = (currentPage - 1) * entriesPerPage,
+            endIndex = Math.min(currentPage * entriesPerPage, totalEntries);
+
+        $currentStartEl.text(startIndex + 1);
+        $currentEndEl.text(endIndex);
+        $totalEntriesEl.text(totalEntries);
+        $prevBtn.prop("disabled", currentPage === 1);
+        $nextBtn.prop("disabled", currentPage === totalPages);
+
+        $pageButtons.each(function () {
+            const pageNumber = parseInt($(this).text(), 10);
+            $(this).toggle(pageNumber <= totalPages).prop("disabled", pageNumber > totalPages)
+                .toggleClass("active", pageNumber === currentPage);
+        });
+
+        $tableRows.each((index, row) => $(row).toggle(index >= startIndex && index < endIndex));
+    }
+
+    $prevBtn.add($nextBtn).add($pageButtons).off("click").on("click", function () {
+        const selectedPage = $(this).is($prevBtn) ? currentPage - 1
+            : $(this).is($nextBtn) ? currentPage + 1
+            : parseInt($(this).text(), 10);
+
+        if (!isNaN(selectedPage) && selectedPage > 0 && selectedPage <= totalPages) {
+            currentPage = selectedPage;
+            updatePagination();
+        }
+    });
+
+    updatePagination();
+}
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function _searchDomainStatic(domain) {
+    $("#notAvailableDomain, #availableDomain, #suggestedDomain").hide();
+
+    if (domain === "afootech.com") {
+        $("#availableDomain").fadeIn("slow").css({'display': 'flex','justify-content': 'space-between','align-items': 'center'});
+		$("#availableDomain").find("h3").text(`${domain} is available`);
+		$("#mainExtension").fadeOut("slow");
+		$("#TableExtension").fadeOut("slow");
+    } else {
+        $("#notAvailableDomain").fadeIn("slow");
+		$("#notAvailableDomain").find("h3").text(`${domain} is not available`);
+		$("#mainExtension").fadeIn("slow");
+		$("#TableExtension").fadeIn("slow");
+    }
+    $("#suggestedDomain").fadeIn("slow");
+}
+
+
+

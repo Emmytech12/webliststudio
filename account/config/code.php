@@ -26,12 +26,11 @@ switch ($action){
 		require_once('../content/form.php');
 	break;
 
-	case 'get_edit_page_form':
+	case 'get_table_details':
 		$page=$_POST['page'];
-		$publish_id=$_POST['publish_id'];
-		require_once('../content/form.php');
+		$ids=$_POST['ids'];
+		require_once('../content/page-content.php');
 	break;
-
 }
 ?>
 
