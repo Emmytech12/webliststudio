@@ -101,7 +101,7 @@ function _removeClass(page){
 
 function _getActivePage(page, menu_id){
 	_removeClass(page);
-	$('#shared_hosting, #new_domains, #transfer_domain, #domains, #user_profile').removeClass('active');
+	$('#shared_hosting, #new_domains, #transfer_domain, #domains, #user_profile_Page').removeClass('active');
 	$('#' + menu_id).addClass('active');
 }
 
@@ -185,6 +185,26 @@ function _getTableContent(menu_id, page, ids) {
 	  cache: false,
 	  success: function (html) {
 		$('#get_table_details').html(html);
+	  }
+	});
+}
+
+function _getActiveUserContent(menu_id){
+	$('#user_profile_info, #user_password_info').removeClass('active-li');
+	$('#' + menu_id).addClass('active-li');
+}
+
+function _getUserContent(menu_id, page, ids) {
+	_getActiveUserContent(menu_id);
+	const action = 'get_user_details';
+	const dataString = 'action=' + action + '&page=' + page + '&ids=' + ids;
+	$.ajax({
+	  type: "POST",
+	  url: account_local_url,
+	  data: dataString,
+	  cache: false,
+	  success: function (html) {
+		$('#get_user_details').html(html);
 	  }
 	});
 }

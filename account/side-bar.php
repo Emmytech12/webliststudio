@@ -62,7 +62,7 @@
             </div>
 
             <div class="dashboard-in" id="accounts-li" style="display:none">
-                <div class="li-in" title="My Profile" onclick="_getPage('user_profile','user_profile');" id="user_profile">My Profile</div>
+                <div class="li-in" title="My Profile" onclick="_getPage('user_profile_Page','user_profile_Page');" id="user_profile_Page">My Profile</div>
                 <div class="li-in" title="Security" onclick="">Security</div>
                 <div class="li-in" title="Log Out" onclick="">Log Out</div>
             </div>

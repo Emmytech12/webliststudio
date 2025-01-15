@@ -1,4 +1,4 @@
-<?php if ($page == 'dashboard') { ?>
+<?php if ($page=='dashboard') { ?>
     <div class="page-title-back-div" data-aos="fade-in" data-aos-duration="1500">
         <div class="page-title-div">
             <div class="top-title"><span id="page-title"><i class="bi-speedometer2"></i> User Dashboard Overview</span></div>
@@ -106,7 +106,7 @@
     </div>
 <?php } ?>
 
-<?php if ($page == 'domain_table') { ?>
+<?php if ($page=='domain_table') { ?>
     <div id="get_table_details" data-aos="fade-in" data-aos-duration="1500">
         <table class="table" cellspacing="0" style="width:100%" id="fetchAllUsers">
             <thead>
@@ -165,7 +165,7 @@
     </div>
 <?php } ?>
 
-<?php if ($page == 'hosting_table') { ?>
+<?php if ($page=='hosting_table') { ?>
     <div id="get_table_details" data-aos="fade-in" data-aos-duration="1500">
         <table class="table" cellspacing="0" style="width:100%" id="fetchAllUsers">
             <thead>
@@ -212,7 +212,7 @@
     </div>
 <?php } ?>
 
-<?php if ($page == 'shared_hosting') { ?>
+<?php if ($page=='shared_hosting') { ?>
     <div class="page-title-back-div other-pages-title-back-div" data-aos="fade-in" data-aos-duration="1500">
         <div class="page-title-div">
             <div class="back-div"><span>Hosting /</span>Shared Hosting</div>
@@ -248,7 +248,7 @@
                 <div class="placeholder dash_placeholder"><i class="bi-search"></i> Search by domain, hosting Plan</div>
             </div>
 
-            <button class="btn" type="button" title="Buy Hosting" onclick="">
+            <button class="btn" type="button" title="Buy Hosting" onclick="_getPage('choose_shared_hosting','shared_hosting');" id="shared_hosting">
                 <i class="bi-hdd-rack"></i> Buy Hosting
             </button>
         </div>
@@ -377,7 +377,9 @@
                             <div class="status-div expired">Terminated</div>
                         </td>
                     </tr>
-                    <script>_tableToggle();</script>
+                    <script>
+                        _tableToggle();
+                    </script>
                 </tbody>
             </table>
         </div>
@@ -401,7 +403,7 @@
     </div>
 <?php } ?>
 
-<?php if ($page == 'domains') { ?>
+<?php if ($page=='domains') { ?>
     <div class="page-title-back-div other-pages-title-back-div" data-aos="fade-in" data-aos-duration="1500">
         <div class="page-title-div">
             <div class="back-div"><span>Domain /</span>My Domains</div>
@@ -440,7 +442,9 @@
     </div>
 
     <div class="dynamic-back-div" data-aos="fade-in" data-aos-duration="1500">
-        <script>_checkAll();</script>
+        <script>
+            _checkAll();
+        </script>
         <div class="table-div animated fadeIn">
             <table class="table" cellspacing="0" style="width:100%" id="fetchAllDomains">
                 <thead>
@@ -691,7 +695,9 @@
                             <div class="status-div expired">Expired</div>
                         </td>
                     </tr>
-                    <script>_tableToggle();</script>
+                    <script>
+                        _tableToggle();
+                    </script>
                 </tbody>
             </table>
         </div>
@@ -709,11 +715,13 @@
                 </div>
             </div>
         </div>
-        <script>_getPagination(10);</script>
+        <script>
+            _getPagination(10);
+        </script>
     </div>
 <?php } ?>
 
-<?php if ($page == 'transfer_domain') { ?>
+<?php if ($page=='transfer_domain') { ?>
     <div class="page-title-back-div other-pages-title-back-div" data-aos="fade-in" data-aos-duration="1500">
         <div class="page-title-div">
             <div class="back-div"><span>Domain /</span>Transfer Domain</div>
@@ -745,7 +753,7 @@
 
 <?php } ?>
 
-<?php if ($page == 'new_domains') { ?>
+<?php if ($page=='new_domains') { ?>
     <div class="page-title-back-div other-pages-title-back-div" data-aos="fade-in" data-aos-duration="1500">
         <div class="page-title-div">
             <div class="back-div"><span>Domain /</span>Buy new domain</div>
@@ -768,7 +776,7 @@
                     </button>
                 </div>
             </div>
-            
+
             <div class="domain-search" id="notAvailableDomain">
                 <div class="left-div">
                     <div class="icon-div"><i class="bi-patch-exclamation"></i></div>
@@ -1068,25 +1076,334 @@
                 </div>
             </div>
         </div>
-        <script>_getPagination(10);</script>
+        <script>
+            _getPagination(10);
+        </script>
     </div>
 <?php } ?>
 
-<?php if ($page == 'user_profile') { ?>
+<?php if ($page=='user_profile_Page') { ?>
     <div class="page-title-back-div other-pages-title-back-div" data-aos="fade-in" data-aos-duration="1500">
         <div class="page-title-div">
             <div class="back-div"><span>Account /</span>User Profile</div>
             <div class="main-title"><i class="bi-person"></i> <strong>User Profile</strong></div>
+            <div class="bottom-title">
+                <span>It is important to keep your domain WHOIS contact information up-to-date at all times to avoid losing control of your domain.</span>
+            </div>
         </div>
     </div>
 
+    <div class="dynamic-back-div" data-aos="fade-in" data-aos-duration="1500">
+        <div class="top-content">
+            <ul>
+                <li class="active-li" title="Personal Information" id="user_profile_info" onclick="_getUserContent('user_profile_info','user_profile_info','')"><i class="bi-person"></i> Personal Info</li>
+                <li title="Password" id="user_password_info" onclick="_getUserContent('user_password_info','user_password_info','')"><i class="bi-shield-lock"></i> Password</li>
+            </ul>
+        </div>
+
+        <div id="get_user_details">
+            <div class="user-profile-back-div">
+                <div class="title">BASIC INFORMATION</div>  
+                <div class="form-back-div">  
+                    <div class="text_field_container col-1">
+                        <input class="text_field" type="text" id="" title="First Name" placeholder="" />
+                        <div class="placeholder">First Name:</div>
+                    </div>
+
+                    <div class="text_field_container col-1">
+                        <input class="text_field" type="text" id="" title="Last Name" placeholder="" />
+                        <div class="placeholder">Last Name:</div>
+                    </div>
+
+                    <div class="text_field_container col-1">
+                        <input class="text_field disabled_text_field" type="email" id="" title="Email Address" placeholder="" disabled="" readonly="" aria-readonly="true" />
+                        <div class="placeholder">Email Address:</div>
+                    </div>
+
+                    <div class="text_field_container col-1">
+                        <input class="text_field disabled_text_field" type="tel" id="" title="Phone Number" placeholder=""  disabled="" readonly="" aria-readonly="true"/>
+                        <div class="placeholder">Phone Number:</div>
+                    </div>
+                </div>
+
+                <div class="title">ADDRESS INFORMATION</div>  
+                <div class="form-back-div">  
+                    <div class="text_field_container col-1">
+                        <input class="text_field" type="text" id="" title="Company Name" placeholder="" />
+                        <div class="placeholder">Company Name:</div>
+                    </div>
+
+                    <div class="text_field_container col-1">
+                        <input class="text_field" type="text" id="" title="Address 1" placeholder="" />
+                        <div class="placeholder">Address 1:</div>
+                    </div>
+
+                    <div class="text_field_container col-1">
+                        <input class="text_field" type="email" id="" title="Address 2" placeholder="" />
+                        <div class="placeholder">Address 2:</div>
+                    </div>
+
+                    <div class="text_field_container form_text_field_container col-1" id="selectContainer">
+                        <select class="text_field formSelectSearch" placeholder="" id="searchCountry"
+                            onclick="_selectOption('searchCountry')" style="opacity: 1;">
+                            <option selected="selected" value="">-Select Country-</option>
+                        </select>
+                        
+                        <div class="placeholder">Select Here</div>
+                        <div class="searchPanel animated fadeIn" id="searchPanel_searchCountry"
+                            style="display: none;">
+                            <input class="searchTxt" placeholder="Type here to search"
+                                id="txtSearchValue_searchCountry" autocomplete="off"
+                                onkeyup="filter('searchCountry')">
+                            <ul id="searchList_searchCountry" data-aos="fade-up" data-aos-duration="200"
+                                class="aos-init aos-animate">
+                                <li onclick="_clickOption('searchList_searchCountry', 'Nigeria', 'Nigeria')">Nigeria</li>
+                                <li onclick="_clickOption('searchList_searchCountry', 'USA', 'USA')">USA</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="text_field_container col-1">
+                        <input class="text_field" type="email" id="" title="Zip Code" placeholder="" />
+                        <div class="placeholder"> Zip Code:</div>
+                    </div>
+
+                    <div class="text_field_container form_text_field_container col-1" id="selectContainer">
+                        <select class="text_field formSelectSearch" placeholder="" id="searchState"
+                            onclick="_selectOption('searchState')" style="opacity: 1;">
+                            <option selected="selected" value="">-Select State-</option>
+                        </select>
+                        
+                        <div class="placeholder">Select Here</div>
+                        <div class="searchPanel animated fadeIn" id="searchPanel_searchState"
+                            style="display: none;">
+                            <input class="searchTxt" placeholder="Type here to search"
+                                id="txtSearchValue_searchState" autocomplete="off"
+                                onkeyup="filter('searchState')">
+                            <ul id="searchList_searchState" data-aos="fade-up" data-aos-duration="200"
+                                class="aos-init aos-animate">
+                                <li onclick="_clickOption('searchList_searchState', 'California', 'California')">California</li>
+                                <li onclick="_clickOption('searchList_searchState', 'Georgia', 'Georgia')">Georgia</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="text_field_container col-1">
+                        <input class="text_field" type="email" id="" title="City" placeholder="" />
+                        <div class="placeholder">City:</div>
+                    </div>
+
+                    <div>    
+                        <button class="btn" title="SUBMIT" id="submit_btn" onclick=""> <i class="bi-check"></i> SAVE CHANGES </button>             
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <?php } ?>
 
+<?php if ($page=='user_profile_info') { ?>
+    <div id="get_user_details">
+        <div class="user-profile-back-div">
+            <div class="title">BASIC INFORMATION</div>  
+            <div class="form-back-div">  
+                <div class="text_field_container col-1">
+                    <input class="text_field" type="text" id="" title="First Name" placeholder="" />
+                    <div class="placeholder">First Name:</div>
+                </div>
 
+                <div class="text_field_container col-1">
+                    <input class="text_field" type="text" id="" title="Last Name" placeholder="" />
+                    <div class="placeholder">Last Name:</div>
+                </div>
 
+                <div class="text_field_container col-1">
+                    <input class="text_field disabled_text_field" type="email" id="" title="Email Address" placeholder="" disabled="" readonly="" aria-readonly="true" />
+                    <div class="placeholder">Email Address:</div>
+                </div>
 
+                <div class="text_field_container col-1">
+                    <input class="text_field disabled_text_field" type="tel" id="" title="Phone Number" placeholder=""  disabled="" readonly="" aria-readonly="true"/>
+                    <div class="placeholder">Phone Number:</div>
+                </div>
+            </div>
 
+            <div class="title">ADDRESS INFORMATION</div>  
+            <div class="form-back-div">  
+                <div class="text_field_container col-1">
+                    <input class="text_field" type="text" id="" title="Company Name" placeholder="" />
+                    <div class="placeholder">Company Name:</div>
+                </div>
+
+                <div class="text_field_container col-1">
+                    <input class="text_field" type="text" id="" title="Address 1" placeholder="" />
+                    <div class="placeholder">Address 1:</div>
+                </div>
+
+                <div class="text_field_container col-1">
+                    <input class="text_field" type="email" id="" title="Address 2" placeholder="" />
+                    <div class="placeholder">Address 2:</div>
+                </div>
+
+                <div class="text_field_container form_text_field_container col-1" id="selectContainer">
+                    <select class="text_field formSelectSearch" placeholder="" id="searchCountry"
+                        onclick="_selectOption('searchCountry')" style="opacity: 1;">
+                        <option selected="selected" value="">-Select Country-</option>
+                    </select>
+                    
+                    <div class="placeholder">Select Here</div>
+                    <div class="searchPanel animated fadeIn" id="searchPanel_searchCountry"
+                        style="display: none;">
+                        <input class="searchTxt" placeholder="Type here to search"
+                            id="txtSearchValue_searchCountry" autocomplete="off"
+                            onkeyup="filter('searchCountry')">
+                        <ul id="searchList_searchCountry" data-aos="fade-up" data-aos-duration="200"
+                            class="aos-init aos-animate">
+                            <li onclick="_clickOption('searchList_searchCountry', 'Nigeria', 'Nigeria')">Nigeria</li>
+                            <li onclick="_clickOption('searchList_searchCountry', 'USA', 'USA')">USA</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text_field_container col-1">
+                    <input class="text_field" type="email" id="" title="Zip Code" placeholder="" />
+                    <div class="placeholder"> Zip Code:</div>
+                </div>
+
+                <div class="text_field_container form_text_field_container col-1" id="selectContainer">
+                    <select class="text_field formSelectSearch" placeholder="" id="searchState"
+                        onclick="_selectOption('searchState')" style="opacity: 1;">
+                        <option selected="selected" value="">-Select State-</option>
+                    </select>
+                    
+                    <div class="placeholder">Select Here</div>
+                    <div class="searchPanel animated fadeIn" id="searchPanel_searchState"
+                        style="display: none;">
+                        <input class="searchTxt" placeholder="Type here to search"
+                            id="txtSearchValue_searchState" autocomplete="off"
+                            onkeyup="filter('searchState')">
+                        <ul id="searchList_searchState" data-aos="fade-up" data-aos-duration="200"
+                            class="aos-init aos-animate">
+                            <li onclick="_clickOption('searchList_searchState', 'California', 'California')">California</li>
+                            <li onclick="_clickOption('searchList_searchState', 'Georgia', 'Georgia')">Georgia</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text_field_container col-1">
+                    <input class="text_field" type="email" id="" title="City" placeholder="" />
+                    <div class="placeholder">City:</div>
+                </div>
+
+                <div>    
+                    <button class="btn" title="SUBMIT" id="submit_btn" onclick=""> <i class="bi-check"></i> SAVE CHANGES </button>             
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+
+<?php if ($page=='user_password_info') { ?>
+    <div id="get_user_details">
+        <div class="user-profile-back-div">
+            <div class="title">PASSWORD</div>  
+            <div class="form-back-div">  
+                <div class="text_field_container col-1">
+                    <input class="text_field" type="text" id="" title="Enter Existing Password" placeholder="" />
+                    <div class="placeholder">Enter Existing Password:</div>
+                </div>
+
+                <div class="text_field_container col-1">
+                    <input class="text_field" type="text" id="" title="Enter New Password" placeholder="" />
+                    <div class="placeholder">Enter New Password:</div>
+                </div>
+
+                <div class="text_field_container col-1">
+                    <input class="text_field" type="email" id="" title="Confirm New Password" placeholder="" />
+                    <div class="placeholder">Confirm New Password:</div>
+                </div>
+
+                <div>    
+                    <button class="btn" title="SUBMIT" id="submit_btn" onclick=""> <i class="bi-check"></i> SAVE CHANGES </button>             
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+
+<?php if ($page=='choose_shared_hosting') { ?>
+    <div class="page-title-back-div other-pages-title-back-div" data-aos="fade-in" data-aos-duration="1500">
+        <div class="page-title-div">
+            <div class="back-div"><span>Hosting /</span><span onclick="_getPage('shared_hosting','shared_hosting');">Shared Hosting /</span>Choose Hosting</div>
+            <div class="main-title"><i class="bi-hdd-rack"></i> <strong>Choose Hosting</strong></div>
+        </div>
+    </div>
+
+    <div class="dynamic-back-div">
+        <div class="choose-shared-hosting-back-div">
+            <div class="choose-shared-hosting-div">
+                <div class="icon-div"><img src="<?php echo $website_url?>/all-images/images/shared_hosting.svg" alt="Shared Hosting"></div>
+                <div class="text-div">
+                    <h3>Shared Hosting</h3>
+                    <p>Get affordable shared hosting</p>
+                </div>
+                <div class="bottom-div">
+                    <span>$2,500.00/mo</span>
+                    <button class="btn" title="BUY NOW">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="choose-shared-hosting-div not-available">
+                <div class="icon-div"><img src="<?php echo $website_url?>/all-images/images/wordpress.svg" alt="Wordpress Hosting"></div>
+                <div class="text-div">
+                    <h3>Wordpress</h3>
+                    <p>Boost your WordPress site with fast, secure hosting tailored</p>
+                </div>
+                <div class="bottom-div">
+                    <span>$0.00/mo</span>
+                    <button class="btn" title="BUY NOW">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="choose-shared-hosting-div not-available">
+                <div class="icon-div"><img src="<?php echo $website_url?>/all-images/images/python.svg" alt="Shared Python"></div>
+                <div class="text-div">
+                    <h3>Python</h3>
+                    <p>Experience seamless Python hosting for your web applications.</p>
+                </div>
+                <div class="bottom-div">
+                    <span>$0.00/mo</span>
+                    <button class="btn" title="BUY NOW">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="choose-shared-hosting-div not-available">
+                <div class="icon-div"><img src="<?php echo $website_url?>/all-images/images/javascript.svg" alt="Shared Javascript"></div>
+                <div class="text-div">
+                    <h3>Javascript</h3>
+                    <p>Get affordable shared hosting</p>
+                </div>
+                <div class="bottom-div">
+                    <span>$0.00/mo</span>
+                    <button class="btn" title="BUY NOW">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="choose-shared-hosting-div not-available">
+                <div class="icon-div"><img src="<?php echo $website_url?>/all-images/images/wordpress.svg" alt="Wordpress lite"></div>
+                <div class="text-div">
+                    <h3>Wordpress-lite</h3>
+                    <p>Get affordable shared hosting</p>
+                </div>
+                <div class="bottom-div">
+                    <span>$0.00/mo</span>
+                    <button class="btn" title="BUY NOW">BUY NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
 
 
 

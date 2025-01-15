@@ -31,6 +31,12 @@ switch ($action){
 		$ids=$_POST['ids'];
 		require_once('../content/page-content.php');
 	break;
+
+	case 'get_user_details':
+		$page=$_POST['page'];
+		$ids=$_POST['ids'];
+		require_once('../content/page-content.php');
+	break;
 }
 ?>
 
